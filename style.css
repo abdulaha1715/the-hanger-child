@@ -125,3 +125,7 @@ Updated: 2022-01-20 11:04:43
 body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-remove a.remove {
     margin-right: 0 !important;
 }
+
+.cart_totals small.includes_tax {
+    display: block;
+}
