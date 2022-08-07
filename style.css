@@ -121,3 +121,7 @@ Updated: 2022-01-20 11:04:43
     font-weight: 500;
     line-height: 28px;
 }
+
+body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-remove a.remove {
+    margin-right: 0 !important;
+}
