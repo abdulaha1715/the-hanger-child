@@ -94,3 +94,12 @@ Updated: 2022-01-20 11:04:43
 	border-bottom: 1px solid black;
 	/* Above is not working for some reason but I'd like a line after the last question as well.*/
 }
+
+
+/*
+ * WooCommerce Customization Style 
+ */
+
+.woocommerce-notices-wrapper p.no-button {
+    margin: 0 !important;
+}
