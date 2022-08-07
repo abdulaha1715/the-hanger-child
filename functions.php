@@ -154,3 +154,32 @@ function beibi_labels_placeholders( $f ) {
 
 //Checkout - move billing to first column
 // ref - https://www.ibenic.com/move-payments-woocommerce-checkout/
+
+
+
+if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
+    function header_free_shipping_banner_yellow_banner() {
+        ?>
+        <div class="site-content-wrapper site-free-shipping-banner" style="margin-top: 0px;">
+            <div class="row small-collapse">
+                <div class="small-12 columns">
+                    <div class="site-content">
+                        <p>
+                        <?php 
+                            echo "x more and get free shipping"; 
+                        ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+}
+
+add_action('header_free_shipping_banner', 'header_free_shipping_banner_yellow_banner');
+
+
+
+
+

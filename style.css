@@ -100,6 +100,24 @@ Updated: 2022-01-20 11:04:43
  * WooCommerce Customization Style 
  */
 
-.woocommerce-notices-wrapper p.no-button {
+.woocommerce-notices-wrapper p {
     margin: 0 !important;
+}
+
+.site-free-shipping-banner {
+    text-align: center;
+    background: #EDE5BD !important;
+}
+
+.site-free-shipping-banner .site-content {
+    background: #EDE5BD;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.site-free-shipping-banner .site-content p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
 }
