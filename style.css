@@ -1,0 +1,96 @@
+/*
+Theme Name: The Hanger Child
+Theme URI: https://historienomdig.dk
+Template: the-hanger
+Author: Britta Acheampong
+Author URI: https://historienomdig.dk
+Description: Parent theme available exclusively on the Envato Market. Child theme by Britta Acheampong. Parent theme version: 1.7.2.1642676683
+Tags: 
+Version: 1.0.6
+Updated: 2022-01-20 11:04:43
+*/
+
+/* Styles for the page as post template------------------------------------------------------------ */
+.page_as_post_header {
+	margin-top: 30px;
+}
+
+/* why does the general themes style for bullets not get added by default check about page and compare with bullets in a post. https://historienomdig.dk/om-os/
+*/
+.entry-content p, ul {
+	margin-top: 2.5rem;
+}
+
+/*How come there is no style for adding space before an image by default?*/
+.wp-block-image {
+	margin-top: 30px;
+}
+
+/*p {
+/* affects breadcrumb OH NO!*/
+/*fontsize 21px as medium.. om os page is now showing p tags. Why? Broken from elementor to normal change?*/
+/*	font-size: 1.3125rem;
+	line-height: 2rem;*/
+/* serif font better to read?*/
+/*	font-family: Charter, Georigia, Cambria, Times, Serif;
+	color: rgb(41,41,41);*/
+	/*The ideal line length is considered to be 66 characters, including spaces, but anything between 50-75 is fine.*/
+/*}
+
+
+/* Yoast-Faq Accordion------------------------------------------------------------ */
+/* original css*/
+.schema-faq-question {
+	cursor: pointer;
+}
+		  
+.schema-faq-question:before {
+	width: 16px;
+	height: 20px;
+	display: inline-block;
+	content: "+";
+	margin-right: 5px;
+	vertical-align: top;
+}
+		  
+.schema-faq-question.collapse:before {
+	content: "-";
+}
+		  
+.schema-faq-question:hover {
+	opacity: 0.8;
+}
+		  
+.schema-faq-answer {
+	display: none;
+	padding-left: 1em;
+}
+
+.schema-faq-answer.default {
+	display: block;
+}
+/* my additions*/
+.schema-faq-section {
+	border-top: 1px solid black;
+	padding: 1rem;
+}
+
+.schema-faq-question {
+	font-family: Comfortaa, Sans-serif;
+	color: black;
+	/*font-size: 1.74rem;
+	font size of h3 but it looks larger, I like how it looks but feel like I need to set a size?*/
+	line-height: 1.4rem; 
+	font-style: normal;
+	font-weight: lighter;
+}
+
+.schema-faq-answer {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.schema-faq wp-block-yoast-faq-block {
+	border-bottom: 1px solid black;
+	/* Above is not working for some reason but I'd like a line after the last question as well.*/
+}
