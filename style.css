@@ -250,3 +250,7 @@ body.woocommerce-cart .woocommerce .woocommerce-cart-form td.product-thumbnail {
 body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-total td {
     text-align: right;
 }
+
+.single-product .quantity-nav {
+    display: none;
+}
