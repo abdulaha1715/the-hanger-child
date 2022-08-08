@@ -143,7 +143,7 @@ body.woocommerce-cart .continue-shopping i {
     padding-left: 10px;
 }
 
-.quantity {
+.woocommerce-cart-form__contents .quantity {
     position: relative;
     width: 65px !important;
     height: 58px !important;
@@ -162,17 +162,17 @@ input[type=number]
   -moz-appearance: textfield;
 }
 
-.quantity input {
+.woocommerce-cart-form__contents .quantity input {
     padding: 0 !important;
     margin: 0 !important;
     padding-right: 15px !important;
 }
 
-.quantity input:focus {
+.woocommerce-cart-form__contents .quantity input:focus {
 	outline: 0;
 }
 
-.quantity-nav {
+.woocommerce-cart-form__contents .quantity-nav {
     position: absolute;
     width: 45%;
     height: 100%;
@@ -182,7 +182,7 @@ input[type=number]
     /* border-left: 1px solid #222; */
 }
 
-.quantity-button {
+.woocommerce-cart-form__contents .quantity-button {
     right: -11px;
     cursor: pointer;
     width: 20px;
@@ -196,19 +196,19 @@ input[type=number]
     user-select: none;
 }
 
-.quantity-button.quantity-up {
+.woocommerce-cart-form__contents .quantity-button.quantity-up {
     position: absolute;
     height: 50%;
     top: 0;
 }
 
-.quantity-button.quantity-down {
+.woocommerce-cart-form__contents .quantity-button.quantity-down {
     position: absolute;
     bottom: 0px;
     height: 50%;
 }
 
-.quantity-button i {
+.woocommerce-cart-form__contents .quantity-button i {
     /* color: #BDBFBF; */
     font-size: 30px;
     line-height: 29px;
