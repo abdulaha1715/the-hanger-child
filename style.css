@@ -213,3 +213,40 @@ input[type=number]
     font-size: 30px;
     line-height: 29px;
 }
+
+body.woocommerce-cart .woocommerce tr.cart-subtotal td {
+    text-align: right;
+}
+
+span.shipping-title {
+    color: #000000;
+    font-family: Comfortaa, sans-serif;
+    display: block;
+    margin-bottom: 15px;
+}
+
+tr.woocommerce-shipping-totals.shipping td {
+    width: 100%;
+}
+
+.awdr_cart_strikeout_line {
+    text-align: left;
+}
+
+.awdr_cart_strikeout_line del {
+    display: block;
+}
+
+body.woocommerce-cart .woocommerce .woocommerce-cart-form td {
+    padding: 1.0rem 0;
+}
+
+body.woocommerce-cart .woocommerce .woocommerce-cart-form td.product-thumbnail {
+    width: 75% !important;
+    margin-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-total td {
+    text-align: right;
+}
