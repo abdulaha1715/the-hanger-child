@@ -182,4 +182,20 @@ add_action('header_free_shipping_banner', 'header_free_shipping_banner_yellow_ba
 
 
 
+//==============================================================================
+//  Continue shopping button on cart page
+//==============================================================================
+
+add_action( 'woocommerce_after_cart_totals', 'add_continue_shopping_button_to_cart' );
+if  ( ! function_exists('add_continue_shopping_button_to_cart') ) :
+    function add_continue_shopping_button_to_cart() {
+    $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+    if (!empty($shop_page_url)):
+        echo '<div class="continue-shopping">';
+        echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<i class="thehanger-icons-arrow-right"></i></a>';
+        echo '</div>';
+    endif;
+}
+endif;
+
 

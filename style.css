@@ -130,7 +130,15 @@ body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-
     display: block;
 }
 
-.wc-proceed-to-checkout i {
+body.woocommerce-cart .continue-shopping {
+    text-align: left;
+}
+
+body.woocommerce-cart .continue-shopping a {
+    padding-left: 0;
+}
+
+body.woocommerce-cart .continue-shopping i {
     display: inline-block;
     padding-left: 10px;
 }
