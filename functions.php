@@ -277,4 +277,7 @@ function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
     }
     echo $out.= ', </span>';
 }
-add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2 );
+
+if( is_page( 'cart' ) ) {
+    add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2 );
+}
