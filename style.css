@@ -254,3 +254,15 @@ body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-t
 .single-product .quantity-nav {
     display: none;
 }
+
+span.cart-p-attributes {
+    font-size: 13px;
+    font-family: Comfortaa, sans-serif;
+    color: #000000;
+}
+
+span.cart-p-attributes span {
+    text-transform: capitalize;
+}
+
+
