@@ -94,3 +94,14 @@ Updated: 2022-01-20 11:04:43
 	border-bottom: 1px solid black;
 	/* Above is not working for some reason but I'd like a line after the last question as well.*/
 }
+
+
+/* same-width class - put this class in wp-bekary row*/
+
+.same-width {
+    margin: 0 !important;
+}
+
+.same-width .vc_column-inner {
+    padding: 0 !important;
+}
