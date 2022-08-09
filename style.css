@@ -485,7 +485,7 @@ li.header-search-icon-below.close a:before {
 
 li.header-search-icon-below.close a:after {
     transform: rotate(45deg);
-    right: 24px;
+    right: 25px;
 }
 
 li.header-search-icon-below.close {}
