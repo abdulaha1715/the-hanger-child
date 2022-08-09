@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 	yoast.accordion();
 
 	// Cart page quantity plus and minus icon
-	jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"><i class="thehanger-icons-ui_plus-window"></i></div><div class="quantity-button quantity-down"><i class="thehanger-icons-ui_minus-window"></i></div></div>').insertAfter('.quantity input');
+	jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
 
 	// Cart page quantity plus and minus icon click event
     jQuery('.quantity').each(function() {

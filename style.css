@@ -17,7 +17,8 @@ Updated: 2022-01-20 11:04:43
 
 /* why does the general themes style for bullets not get added by default check about page and compare with bullets in a post. https://historienomdig.dk/om-os/
 */
-.entry-content p, ul {
+.entry-content p,
+ul {
     margin-top: 2.5rem;
 }
 
@@ -34,7 +35,7 @@ Updated: 2022-01-20 11:04:43
 /* serif font better to read?*/
 /*  font-family: Charter, Georigia, Cambria, Times, Serif;
     color: rgb(41,41,41);*/
-    /*The ideal line length is considered to be 66 characters, including spaces, but anything between 50-75 is fine.*/
+/*The ideal line length is considered to be 66 characters, including spaces, but anything between 50-75 is fine.*/
 /*}
 
 
@@ -43,7 +44,7 @@ Updated: 2022-01-20 11:04:43
 .schema-faq-question {
     cursor: pointer;
 }
-          
+
 .schema-faq-question:before {
     width: 16px;
     height: 20px;
@@ -52,15 +53,15 @@ Updated: 2022-01-20 11:04:43
     margin-right: 5px;
     vertical-align: top;
 }
-          
+
 .schema-faq-question.collapse:before {
     content: "-";
 }
-          
+
 .schema-faq-question:hover {
     opacity: 0.8;
 }
-          
+
 .schema-faq-answer {
     display: none;
     padding-left: 1em;
@@ -69,6 +70,7 @@ Updated: 2022-01-20 11:04:43
 .schema-faq-answer.default {
     display: block;
 }
+
 /* my additions*/
 .schema-faq-section {
     border-top: 1px solid black;
@@ -80,7 +82,7 @@ Updated: 2022-01-20 11:04:43
     color: black;
     /*font-size: 1.74rem;
     font size of h3 but it looks larger, I like how it looks but feel like I need to set a size?*/
-    line-height: 1.4rem; 
+    line-height: 1.4rem;
     font-style: normal;
     font-weight: lighter;
 }
@@ -150,21 +152,19 @@ body.woocommerce-cart .continue-shopping i {
 
 .woocommerce-cart-form__contents .quantity {
     position: relative;
-    width: 65px !important;
+    width: 75px !important;
     height: 58px !important;
-    border: 1px solid #A3A8A6;
+    border: 1px solid #D8DCDE;
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button
-{
-  -webkit-appearance: none;
-  margin: 0;
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input[type=number]
-{
-  -moz-appearance: textfield;
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .woocommerce-cart-form__contents .quantity input {
@@ -177,47 +177,7 @@ input[type=number]
     outline: 0;
 }
 
-.woocommerce-cart-form__contents .quantity-nav {
-    position: absolute;
-    width: 45%;
-    height: 100%;
-    top: 0;
-    right: -1px;
-    overflow: hidden;
-    /* border-left: 1px solid #222; */
-}
 
-.woocommerce-cart-form__contents .quantity-button {
-    right: -11px;
-    cursor: pointer;
-    width: 20px;
-    text-align: center;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.woocommerce-cart-form__contents .quantity-button.quantity-up {
-    position: absolute;
-    height: 50%;
-    top: 0;
-}
-
-.woocommerce-cart-form__contents .quantity-button.quantity-down {
-    position: absolute;
-    bottom: 0px;
-    height: 50%;
-}
-
-.woocommerce-cart-form__contents .quantity-button i {
-    /* color: #BDBFBF; */
-    font-size: 30px;
-    line-height: 29px;
-}
 
 body.woocommerce-cart .woocommerce tr.cart-subtotal td {
     text-align: right;
@@ -284,10 +244,6 @@ body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-t
     text-align: right;
 }
 
-.single-product .quantity-nav {
-    display: none;
-}
-
 span.cart-p-attributes {
     font-size: 13px;
     font-family: Comfortaa, sans-serif;
@@ -298,3 +254,84 @@ span.cart-p-attributes span {
     text-transform: capitalize;
 }
 
+/* add to cart spin */
+
+.single-product input.qty.text {
+    color: #000000;
+    background: #ffffff;
+    width: 125px !important;
+    padding-left: 0 !important;
+    padding-right: 20px !important;
+    border: 1px solid #D8DCDE !important;
+}
+
+.single-product .quantity {
+    position: relative;
+}
+
+.single-product .quantity-nav,
+.woocommerce-cart-form__contents .quantity-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 100%;
+    border-left: 1px solid #D8DCDE !important;
+}
+
+.single-product .product .cart .quantity i {
+    display: none;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 29px;
+    height: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid #D8DCDE !important;
+}
+
+.quantity-button.quantity-down {
+    position: absolute;
+    top: 28px;
+    right: -1px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.quantity-button {
+    position: relative;
+}
+
+.quantity-button.quantity-up:before,
+.quantity-button.quantity-up:after {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 18px;
+    top: 5px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.quantity-button.quantity-up:after {
+    top: 5px;
+    right: 14px;
+    transform: rotate(90deg);
+}
+
+.quantity-button.quantity-down:after {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 18px;
+    top: 6px;
+    right: 14px;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
