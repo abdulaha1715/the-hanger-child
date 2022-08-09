@@ -493,3 +493,18 @@ li.header-search-icon-below.close {}
 li.header-search-icon-below.close i {
     opacity: 0;
 }
+
+/* site name in mobile */
+.site-logo {
+    position: relative;
+    padding-bottom: 19px;
+}
+
+.site-logo p.site-title {
+    position: absolute;
+    margin: 0;
+    font-size: 21px;
+    text-align: center;
+    top: 40px;
+    left: -4px;
+}
