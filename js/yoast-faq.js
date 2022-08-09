@@ -29,4 +29,10 @@
 		};
 
 		yoast.accordion();
+
+		// search toogle class
+		jQuery(".header-search-icon-below").click(function(){
+			jQuery(".header-search-icon-below").toggleClass("close");
+			jQuery(".header-search-below").toggleClass("active-search");
+		});
 	});
