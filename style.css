@@ -97,7 +97,7 @@ Updated: 2022-01-20 11:04:43
 
 /* home site-prefooter */
 
-.site-prefooter.home-below-hero {
+body.home .site-prefooter.home-below-hero {
     display: block !important;
 }
 
