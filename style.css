@@ -250,7 +250,12 @@ span.cart-p-attributes {
     color: #000000;
 }
 
-span.cart-p-attributes span {
+
+p.cart-p-attributes {
+  margin: 0 !important;
+}
+
+p.cart-p-attributes span {
     text-transform: capitalize;
 }
 

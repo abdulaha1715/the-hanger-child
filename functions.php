@@ -211,7 +211,7 @@ function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
         return $cart_item;
     }
       
-    $out = $cart_item . '<br /><span class="cart-p-attributes">';
+    $out = $cart_item . '<br /><p class="cart-p-attributes">';
       
     $count = count( $attributes );
       
@@ -256,7 +256,7 @@ function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
             $out .= implode(', ', $tax_terms);
               
             if ( $count > 1 && ( $i < ($count - 1) ) ) {
-                $out .= ', </br>';
+                $out .= '</br>';
             }
           
             $i++;
@@ -269,13 +269,13 @@ function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
             $out .= esc_html( implode( ', ', $attribute->get_options() ) );
           
             if ( $count > 1 && ( $i < ($count - 1) ) ) {
-                $out .= ', ';
+                $out .= '';
             }
           
             $i++;
         }
     }
-    echo $out.= ', </span>';
+    echo $out.= ', </p>';
 }
 
 add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2 );

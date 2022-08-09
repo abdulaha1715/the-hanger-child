@@ -30,9 +30,6 @@ jQuery(document).ready(function($){
 
 	yoast.accordion();
 
-	// Cart page quantity plus and minus icon
-	jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
-
 	// Cart page quantity plus and minus icon click event
     jQuery('.quantity').each(function() {
 		var spinner = jQuery(this),
