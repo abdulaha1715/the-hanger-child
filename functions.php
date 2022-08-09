@@ -159,26 +159,20 @@ function beibi_labels_placeholders( $f ) {
 // 
 function ab_why_shop_here( $atts ) {
     return '<div class="site-prefooter home-below-hero">
-        
-            <div class="row small-collapse">
 
-                <div class="large-12 columns">
+            <div class="prefooter-content">
 
-                    <div class="prefooter-content">
+                <aside class="widget-area">
 
-                        <aside class="widget-area">
+                    <div class="row small-up-1 medium-up-2 large-up-4">
+                        <div class="column"><aside id="theme_ecommerce_info-1" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-2"></i></div><h4 class="widget-title">Gratis fragt</h4></div><div class="ecommerce-info-widget-subtitle">Ved køb over 399,-</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-2" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-transport"></i></div><h4 class="widget-title">Hurtig levering</h4></div><div class="ecommerce-info-widget-subtitle">Vi sender alle hverdage</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-3" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ui_star"></i></div><h4 class="widget-title">Udvidet returret </h4></div><div class="ecommerce-info-widget-subtitle">30-dages fuld returret</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-4" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_credit-card"></i></div><h4 class="widget-title">Sikker betaling </h4></div><div class="ecommerce-info-widget-subtitle">Betalingskort og MobilePay</div></div></aside></div>                         </div>
 
-                            <div class="row small-up-1 medium-up-2 large-up-4">
-                                <div class="column"><aside id="theme_ecommerce_info-1" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-2"></i></div><h4 class="widget-title">Gratis fragt</h4></div><div class="ecommerce-info-widget-subtitle">Ved køb over 399,-</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-2" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-transport"></i></div><h4 class="widget-title">Hurtig levering</h4></div><div class="ecommerce-info-widget-subtitle">Vi sender alle hverdage</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-3" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ui_star"></i></div><h4 class="widget-title">Udvidet returret </h4></div><div class="ecommerce-info-widget-subtitle">30-dages fuld returret</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-4" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_credit-card"></i></div><h4 class="widget-title">Sikker betaling </h4></div><div class="ecommerce-info-widget-subtitle">Betalingskort og MobilePay</div></div></aside></div>                         </div>
+                </aside>
 
-                        </aside>
+                <div class="hover_overlay_footer"></div>
 
-                        <div class="hover_overlay_footer"></div>
-
-                    </div>
-
-                </div>
             </div>
+
 
     </div>';
 }
