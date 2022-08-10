@@ -1,16 +1,34 @@
 <?php get_header(); ?>
 
-	<div class="site-page-content">
-
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content/content', 'page' );
-
-		endwhile; // End of the loop.
+	<?php
+		if( !is_front_page() ) {
 		?>
+		<div class="row small-collapse">
+			<div class="small-12 columns">
+		<?php
+		}
+	?>
 
-	</div>
+		<div class="site-page-content">
+
+			<?php
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'template-parts/content/content', 'page' );
+
+			endwhile; // End of the loop.
+			?>
+
+		</div>
+
+	<?php
+		if( !is_front_page() ) {
+		?>
+			</div>
+		</div>
+		<?php
+		}
+	?>
 
 
 	<?php if ( comments_open() || get_comments_number() ) : ?>
