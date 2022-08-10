@@ -814,3 +814,26 @@ body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content
 .getbowtied_qv_content.site-content.maybe_scroll .quantity-nav {
     display: none;
 }
+
+/* cart page product remove */
+.woocommerce-cart-form tr.cart_item td.product-remove.small-screen-p-remove {
+    display: none;
+}
+
+@media screen and ( max-width:1023px ) {
+    .woocommerce-cart-form tr.cart_item td.product-remove {
+        display: none;
+    }
+    .woocommerce-cart-form tr.cart_item td.product-remove.small-screen-p-remove {
+        display: block;
+    }
+    td.product-price {
+        justify-content: space-between;
+    }
+
+    .woocommerce-cart-form__contents .quantity input {
+        padding-top: 17px !important;
+        padding-right: 0 !important;
+        border-bottom: none !important;
+    }
+}
