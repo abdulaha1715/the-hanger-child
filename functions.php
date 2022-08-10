@@ -304,3 +304,50 @@ function theme_cart_entry_header() {
     <?php
 }
 add_action('woocommerce_before_cart', 'theme_cart_entry_header', 8);
+
+function woocommerce_checkout_billing_fields( $checkout_fields ) {
+
+    $checkout_fields['billing']['billing_first_name']['priority'] = 10;
+    $checkout_fields['billing']['billing_last_name']['priority']  = 20;
+    $checkout_fields['billing']['billing_address_1']['priority']  = 40;
+    $checkout_fields['billing']['billing_postcode']['priority']   = 60;
+    $checkout_fields['billing']['billing_city']['priority']       = 70;
+    $checkout_fields['billing']['billing_email']['priority']      = 100;
+    $checkout_fields['billing']['billing_phone']['priority']      = 110;
+
+    unset( $checkout_fields['billing']['billing_country'] );
+    
+    return $checkout_fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_billing_fields' );
+
+function woocommerce_checkout_shipping_fields( $checkout_fields ) {
+
+    $checkout_fields['shipping']['shipping_first_name']['priority'] = 10;
+    $checkout_fields['shipping']['shipping_last_name']['priority']  = 20;
+    $checkout_fields['shipping']['shipping_address_1']['priority']  = 40;
+    $checkout_fields['shipping']['shipping_postcode']['priority']   = 60;
+    $checkout_fields['shipping']['shipping_city']['priority']       = 70;
+    $checkout_fields['shipping']['shipping_phone']['priority']      = 110;
+
+    unset( $checkout_fields['shipping']['shipping_company'] );
+    unset( $checkout_fields['shipping']['shipping_country'] );
+    unset( $checkout_fields['shipping']['shipping_address_2'] );
+    
+    return $checkout_fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_shipping_fields' );
+
+
+function phone_email_shipping_checkout_fields( $fields ) {
+     $fields['shipping']['shipping_email'] = array(
+        'label'     => __('Email address', 'woocommerce'),
+        'required'  => true,
+        'class'     => array('form-row-wide'),
+        'clear'     => true,
+        'priority' => 100
+     );
+
+     return $fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'phone_email_shipping_checkout_fields' );

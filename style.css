@@ -868,7 +868,7 @@ body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content
 
 .woocommerce-billing-fields__field-wrapper h3 {
     padding-top: 60px;
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 
 form.checkout.woocommerce-checkout {
@@ -899,6 +899,91 @@ form.checkout.woocommerce-checkout {
 
 .woocommerce-checkout .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
     margin-top: 40px;
+}
+
+body.woocommerce-checkout .woocommerce .woocommerce-billing-fields .form-row-first, 
+body.woocommerce-checkout .woocommerce .woocommerce-shipping-fields .form-row-last,
+body.woocommerce-checkout .woocommerce .woocommerce-billing-fields .form-row-last, 
+body.woocommerce-checkout .woocommerce .woocommerce-shipping-fields .form-row-last,
+body.woocommerce-checkout .woocommerce .woocommerce-billing-fields .form-row-first, 
+body.woocommerce-checkout .woocommerce .woocommerce-shipping-fields .form-row-first {
+    width: 100%;
+    float: unset;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.woocommerce-billing-fields  label,
+.woocommerce-shipping-fields .shipping_address label {
+    width: 32%;
+    float: left;
+    line-height: 28px;
+    padding-top: 10px;
+    margin-right: 15px;
+}
+
+.woocommerce-billing-fields p.form-row {
+    clear: both;
+    margin: 0;
+}
+
+.woocommerce-billing-fields {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #A8ACAB;
+}
+
+span.woocommerce-input-wrapper {
+}
+
+input#billing_first_name,
+input#billing_last_name,
+input#billing_address_1,
+input#billing_postcode,
+input#billing_city,
+input#billing_email,
+input#billing_phone,
+input#shipping_first_name,
+input#shipping_last_name,
+input#shipping_company,
+input#shipping_country,
+input#shipping_address_1,
+input#shipping_postcode,
+input#shipping_city,
+input#shipping_email,
+input#shipping_phone {
+    width: 65%;
+    margin: 0 !important;
+}
+
+p.form-row.form-row-wide.mailchimp-newsletter {
+    display: none;
+}
+
+label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
+    padding: 20px 0 0;
+}
+
+.woocommerce-shipping-fields {
+    border-bottom: 2px solid #A8ACAB;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table td.product-name {
+    color: #000000;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table p.cart-p-attributes {
+    display: none;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table td.product-total {
+    color: #000000;
+}
+
+tr.order-total th {
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .woocommerce-cart .site-page-content {
