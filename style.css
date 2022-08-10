@@ -111,14 +111,15 @@ ul {
 }
 
 .site-free-shipping-banner {
-    text-align: center;
+    padding: 8px 0;
     background: #EDE5BD !important;
 }
 
-.site-free-shipping-banner .site-page-content {
-    background: #EDE5BD;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+.site-free-shipping-banner p {
+    text-align: center;
+    margin: 0 auto;
+    font-family: Comfortaa, sans-serif;
+    font-size: 14px;
 }
 
 .site-free-shipping-banner .site-page-content p {
