@@ -265,17 +265,17 @@ function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
         } else {
   
             // not a taxonomy
-            $out .= $name . ': ';
+            $out .= '<span>'.  $name . ': </span>';
             $out .= esc_html( implode( ', ', $attribute->get_options() ) );
           
             if ( $count > 1 && ( $i < ($count - 1) ) ) {
-                $out .= '';
+                $out .= '</br>';
             }
           
             $i++;
         }
     }
-    echo $out.= ', </p>';
+    echo $out.= '</p>';
 }
 
 add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2 );
