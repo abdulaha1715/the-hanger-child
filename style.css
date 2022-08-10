@@ -999,6 +999,20 @@ body.woocommerce-cart .continue-shopping {
     padding-bottom: 60px;
 }
 
+input.input.shipmondo_zipcode {
+    width: 120px !important;
+    margin-right: 15px !important;
+}
+
+.shipmondo_stores {
+    display: flex;
+}
+
+input.button.shipmondo_select_button {
+    width: 250px !important;
+    padding: 15px 0;
+}
+
 
 @media screen and ( max-width:1023px ) {
     .woocommerce-cart-form tr.cart_item td.product-remove {
