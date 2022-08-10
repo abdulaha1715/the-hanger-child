@@ -296,3 +296,11 @@ function ab_why_shop_here( $atts ) {
 }
 add_shortcode( 'why_shop_here', 'ab_why_shop_here' );
 
+function theme_cart_entry_header() {
+    ?>
+    <header class="cart entry-header">
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    </header><!-- .entry-header -->
+    <?php
+}
+add_action('woocommerce_before_cart', 'theme_cart_entry_header', 8);
