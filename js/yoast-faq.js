@@ -30,6 +30,12 @@ jQuery(document).ready(function($){
 
 	yoast.accordion();
 
+	// search toogle class
+	jQuery(".header-search-icon-below").click(function(){
+		jQuery(".header-search-icon-below").toggleClass("close");
+		jQuery(".header-search-below").toggleClass("active-search");
+	});
+
 	// Cart page quantity plus and minus icon click event
     jQuery('.quantity').each(function() {
 		var spinner = jQuery(this),
