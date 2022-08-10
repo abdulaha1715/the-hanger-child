@@ -340,7 +340,11 @@ p.cart-p-attributes span {
 
 /* home site-prefooter */
 
-body.home .site-prefooter.home-below-hero {
+.home-below-hero {
+    background: #f4f7f7 !important;
+}
+
+body.home .home-below-hero .site-prefooter {
     display: block !important;
 }
 

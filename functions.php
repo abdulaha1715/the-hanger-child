@@ -279,7 +279,8 @@ add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2
  * Why shop here shortcode
  */
 function ab_why_shop_here( $atts ) {
-    return '<div class="site-prefooter home-below-hero">
+    return '<div class="home-below-hero">
+            <div class="site-prefooter row small-collapse">
 
             <div class="prefooter-content">
 
@@ -293,7 +294,7 @@ function ab_why_shop_here( $atts ) {
                 <div class="hover_overlay_footer"></div>
 
             </div>
-
+        </div>
 
     </div>';
 }
