@@ -868,6 +868,7 @@ body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content
 
 .woocommerce-billing-fields__field-wrapper h3 {
     padding-top: 60px;
+    margin-bottom: 0;
 }
 
 form.checkout.woocommerce-checkout {
