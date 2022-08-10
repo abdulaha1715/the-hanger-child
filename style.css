@@ -758,7 +758,7 @@ li.header-search-icon-below.close i {
 
 /* same-width class - put this class in wp-bekary row*/
 .same-width {
-    margin: 0 !important;
+    margin: 0 auto !important;
 }
 
 .same-width .vc_column-inner {
