@@ -751,3 +751,12 @@ li.header-search-icon-below.close i {
     top: 40px;
     left: -4px;
 }
+
+/* same-width class - put this class in wp-bekary row*/
+.same-width {
+    margin: 0 !important;
+}
+
+.same-width .vc_column-inner {
+    padding: 0 !important;
+}
