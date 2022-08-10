@@ -115,13 +115,13 @@ ul {
     background: #EDE5BD !important;
 }
 
-.site-free-shipping-banner .site-content {
+.site-free-shipping-banner .site-page-content {
     background: #EDE5BD;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
 }
 
-.site-free-shipping-banner .site-content p {
+.site-free-shipping-banner .site-page-content p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -759,4 +759,54 @@ li.header-search-icon-below.close i {
 
 .same-width .vc_column-inner {
     padding: 0 !important;
+}
+
+/* page template padding-left and padding-right */
+
+.site-wrapper .site-content-wrapper .site-page-content {
+    padding: 1.6875rem 1.25rem;
+}
+
+.woocommerce-account .site-wrapper .site-content-wrapper .site-page-content {
+    padding-bottom: 2.9375rem
+}
+
+.woocommerce-account .site-wrapper .site-content-wrapper .site-page-content {
+    padding-bottom: 3.525rem
+}
+
+@media screen and (min-width:80em) {
+    .site-wrapper .site-content-wrapper .site-page-content {
+        padding: 3.0375rem 2.25rem
+    }
+}
+
+body:not(.archive):not(.blog).page-without-title .site-wrapper .site-content-wrapper .site-page-content {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content {
+    position: relative
+}
+
+@media screen and (min-width:80em) {
+    .site-wrapper .site-content-wrapper .site-page-content {
+        padding-left: 5.25rem;
+        padding-right: 5.25rem;
+        padding-left: 5.25rem !important;
+        padding-right: 5.25rem !important
+    }
+}
+.woocommerce-account .site-wrapper .site-content-wrapper .site-page-content {
+    padding-bottom: 5.2875rem
+}
+
+.home .site-wrapper .site-content-wrapper .site-page-content {
+    padding: 0 !important;
+}
+
+/* hide quantity-nav in quick view */
+.getbowtied_qv_content.site-content.maybe_scroll .quantity-nav {
+    display: none;
 }
