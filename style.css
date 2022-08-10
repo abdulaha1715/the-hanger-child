@@ -1000,16 +1000,12 @@ body.woocommerce-cart .continue-shopping {
 }
 
 input.input.shipmondo_zipcode {
-    width: 120px !important;
+    width: 100% !important;
     margin-right: 15px !important;
 }
 
-.shipmondo_stores {
-    display: flex;
-}
-
 input.button.shipmondo_select_button {
-    width: 250px !important;
+    width: 100% !important;
     padding: 15px 0;
 }
 
