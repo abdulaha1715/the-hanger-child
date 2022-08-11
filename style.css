@@ -888,10 +888,6 @@ form.checkout.woocommerce-checkout {
     padding-bottom: 60px;
 }
 
-.woocommerce-checkout .woocommerce-form-coupon-toggle {
-    display: none;
-}
-
 .woocommerce-checkout header.entry-header {
     display: none;
 }
@@ -1028,6 +1024,31 @@ p#order_comments_field label {
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.woocommerce-checkout .woocommerce-form-coupon-toggle {
+    padding: 40px 0;
+}
+
+div#order_review ul.wc_payment_methods.payment_methods.methods,
+.woocommerce-additional-fields .form-row.place-order  {
+    display: none;
+}
+
+ul.woocommerce-error p {
+    margin-top: 0 !important;
+}
+
+.checkout-right-shipping,
+.checkout-right-payment {
+    padding: 40px 0;
+    border-bottom: 2px solid #a7a7a7;
+}
+
+.checkout-right-shipping h3#delivery-method,
+.checkout-right-payment h3#payment{
+    font-size: 19px;
+    font-family: Comfortaa, Sans-serif;
 }
 
 
