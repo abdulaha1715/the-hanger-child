@@ -296,6 +296,9 @@ function ab_why_shop_here( $atts ) {
 }
 add_shortcode( 'why_shop_here', 'ab_why_shop_here' );
 
+/**
+ * Cart page title
+ */
 function theme_cart_entry_header() {
     ?>
     <header class="cart entry-header">
@@ -305,6 +308,9 @@ function theme_cart_entry_header() {
 }
 add_action('woocommerce_before_cart', 'theme_cart_entry_header', 8);
 
+/**
+ * Checkout billing fields
+ */
 function woocommerce_checkout_billing_fields( $checkout_fields ) {
 
     $checkout_fields['billing']['billing_first_name']['priority'] = 10;
@@ -321,6 +327,9 @@ function woocommerce_checkout_billing_fields( $checkout_fields ) {
 }
 add_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_billing_fields' );
 
+/**
+ * Shipping billing fields
+ */
 function woocommerce_checkout_shipping_fields( $checkout_fields ) {
 
     $checkout_fields['shipping']['shipping_first_name']['priority'] = 10;
@@ -338,8 +347,10 @@ function woocommerce_checkout_shipping_fields( $checkout_fields ) {
 }
 add_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_shipping_fields' );
 
-
-function phone_email_shipping_checkout_fields( $fields ) {
+/**
+ * shipping email checkout fields
+ */
+function shipping_email_checkout_fields( $fields ) {
      $fields['shipping']['shipping_email'] = array(
         'label'     => __('Email address', 'woocommerce'),
         'required'  => true,
@@ -350,4 +361,4 @@ function phone_email_shipping_checkout_fields( $fields ) {
 
      return $fields;
 }
-add_filter( 'woocommerce_checkout_fields' , 'phone_email_shipping_checkout_fields' );
+add_filter( 'woocommerce_checkout_fields' , 'shipping_email_checkout_fields' );
