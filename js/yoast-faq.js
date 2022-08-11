@@ -68,4 +68,9 @@ jQuery(document).ready(function($){
 		});
 
     });	 
+
+	// order comment toogle class
+	jQuery("#order_comments_field").click(function(){
+		jQuery("#order_comments_field").toggleClass("open");
+	});
 });

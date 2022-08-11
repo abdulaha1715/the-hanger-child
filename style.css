@@ -884,7 +884,6 @@ form.checkout.woocommerce-checkout {
     padding-bottom: 0 !important;
 }
 
-.woocommerce-additional-fields, 
 .form-row.place-order {
     padding-bottom: 60px;
 }
@@ -1008,6 +1007,28 @@ input.button.shipmondo_select_button {
     width: 100% !important;
     padding: 15px 0;
 }
+
+/* comment */
+textarea#order_comments {
+    opacity: 0; 
+    visibility: hidden;
+    height: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+p#order_comments_field.open textarea#order_comments {
+    display: block;
+    opacity: 1; 
+    visibility: visible;
+    transition: 0.3s;
+}
+
+p#order_comments_field label {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 
 
 @media screen and ( max-width:1023px ) {
