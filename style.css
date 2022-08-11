@@ -1142,3 +1142,16 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
         border-bottom: none !important;
     }
 }
+
+@media screen and (max-width:575px) {
+    nav.kundeservice a.wp-block-navigation-item__content {
+        padding: 40px 0 66px;
+    }
+
+    nav.kundeservice li.wp-block-navigation-item {
+        width: 100%;
+        margin: 0;
+        display: inline-block;
+        margin-bottom: 8px !important;
+    }
+}
