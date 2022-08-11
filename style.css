@@ -1025,6 +1025,7 @@ p#order_comments_field.open textarea#order_comments {
 }
 
 p#order_comments_field label {
+    font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
 }
