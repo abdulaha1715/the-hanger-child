@@ -1085,12 +1085,12 @@ input {
     border-radius: 10px !important;
 }
 
-button {
+
+button,
+a.vc_general,
+a.button.checkout.wc-forward,
+a.checkout-button.button.alt.wc-forward {
     border-radius: 10px !important;
-}
-input.header_search_input,
-input#coupon_code {
-    background: transparent !important;
 }
 
 section.yikes-mailchimp-form-description {
@@ -1145,6 +1145,26 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
     top: 64%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+/* unchange */
+.single-product .product .cart .quantity input {
+    background: #fff !important;
+    border-radius: 0 !important;
+}
+body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-quantity .quantity input,
+input.header_search_input,
+input#coupon_code {
+    background: transparent !important;
+}
+
+#getbowtied_woocommerce_quickview .getbowtied_qv_content .site-content .product .cart .quantity input {
+    background: #000 !important;
+}
+.single-product .product .cart .button,
+#getbowtied_woocommerce_quickview .getbowtied_qv_content .site-content .product .cart button.single_add_to_cart_button {
+    border-radius: 0 !important;
 }
 
 
