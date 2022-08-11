@@ -1066,7 +1066,10 @@ input#coupon_code {
     background: transparent !important;
 }
 
-
+section.yikes-mailchimp-form-description {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
 
 
 
