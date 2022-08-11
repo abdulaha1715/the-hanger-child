@@ -950,6 +950,8 @@ input#shipping_email,
 input#shipping_phone {
     width: 65%;
     margin: 0 !important;
+    background: #d5e1e1;
+    border-radius: 10px;
 }
 
 p.form-row.form-row-wide.mailchimp-newsletter {
@@ -1062,7 +1064,8 @@ input {
 button,
 a.vc_general,
 a.button.checkout.wc-forward,
-a.checkout-button.button.alt.wc-forward {
+a.checkout-button.button.alt.wc-forward,
+.woocommerce-checkout-payment .place-order .button {
     border-radius: 10px !important;
 }
 
