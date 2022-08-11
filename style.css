@@ -1061,7 +1061,7 @@ input {
 button {
     border-radius: 10px !important;
 }
-
+input.header_search_input,
 input#coupon_code {
     background: transparent !important;
 }
