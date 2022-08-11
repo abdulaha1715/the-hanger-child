@@ -1078,6 +1078,15 @@ td.woocommerce-table__product-total.product-total,
     text-align: right;
 }
 
+/* order customer details */
+p.woocommerce-customer-details--phone {
+    margin-top: 5px !important;
+}
+
+p.woocommerce-customer-details--phone, p.woocommerce-customer-details--email {
+    margin: 0;
+}
+
 
 @media screen and ( max-width:1023px ) {
     .woocommerce-cart-form tr.cart_item td.product-remove {
