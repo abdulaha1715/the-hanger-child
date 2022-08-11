@@ -1051,6 +1051,23 @@ ul.woocommerce-error p {
     font-family: Comfortaa, Sans-serif;
 }
 
+/* requirement 9 style */
+
+input {
+    background: #d5e1e1 !important;
+    border-radius: 10px !important;
+}
+
+button {
+    border-radius: 10px !important;
+}
+
+input#coupon_code {
+    background: transparent !important;
+}
+
+
+
 
 
 @media screen and ( max-width:1023px ) {
