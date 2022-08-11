@@ -1051,6 +1051,32 @@ ul.woocommerce-error p {
     font-family: Comfortaa, Sans-serif;
 }
 
+/* order page */
+.woocommerce-order {
+    padding: 80px 0;
+}
+
+.woocommerce-order h3.thankyou-h {
+    font-size: 28px;
+    margin: 0;
+}
+
+p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+    color: #000000;
+    margin: 20px 0 20px;
+    padding-bottom: 60px !important;
+}
+
+p.d-p-bank {
+    color: #000000;
+}
+
+th.woocommerce-table__product-table.product-total,
+td.woocommerce-table__product-total.product-total,
+.order_details tfoot td {
+    padding-right: 14% !important;
+    text-align: right;
+}
 
 
 @media screen and ( max-width:1023px ) {
