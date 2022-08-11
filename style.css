@@ -1087,6 +1087,10 @@ p.woocommerce-customer-details--phone, p.woocommerce-customer-details--email {
     margin: 0;
 }
 
+.woocommerce-order-received .site-free-shipping-banner {
+    display: none;
+}
+
 
 @media screen and ( max-width:1023px ) {
     .woocommerce-cart-form tr.cart_item td.product-remove {
