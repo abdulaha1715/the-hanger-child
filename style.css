@@ -1079,6 +1079,18 @@ td.woocommerce-table__product-total.product-total,
     padding-right: 14% !important;
     text-align: right;
 }
+/* order customer details */
+p.woocommerce-customer-details--phone {
+    margin-top: 5px !important;
+}
+
+p.woocommerce-customer-details--phone, p.woocommerce-customer-details--email {
+    margin: 0;
+}
+
+.woocommerce-order-received .site-free-shipping-banner {
+    display: none;
+}
 
 /* requirement 9 style */
 
@@ -1086,7 +1098,6 @@ input {
     background: #d5e1e1 !important;
     border-radius: 10px !important;
 }
-
 
 button,
 a.vc_general,
