@@ -145,9 +145,9 @@ body.woocommerce-cart .continue-shopping a {
     padding-left: 0;
 }
 
-body.woocommerce-cart .continue-shopping i {
-    display: inline-block;
-    padding-left: 10px;
+body.woocommerce-cart .continue-shopping img {
+    width: 42px;
+    margin-left: 15px;
 }
 
 .woocommerce-cart-form__contents .quantity {

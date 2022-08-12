@@ -183,8 +183,10 @@ if  ( ! function_exists('add_continue_shopping_button_to_cart') ) :
     function add_continue_shopping_button_to_cart() {
     $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
     if (!empty($shop_page_url)):
+
+        $arrow_img = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow.png';
         echo '<div class="continue-shopping">';
-        echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<i class="thehanger-icons-arrow-right"></i></a>';
+        echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<img src="'.$arrow_img.'" alt="arrow-right"></a>';
         echo '</div>';
     endif;
 }
