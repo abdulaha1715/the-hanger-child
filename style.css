@@ -1028,6 +1028,44 @@ p#order_comments_field label {
     transition: 0.3s;
 }
 
+p#order_comments_field label {
+    position: relative;
+    display: inline-block;
+}
+
+p#order_comments_field label:after,
+p#order_comments_field label:before{
+    position: absolute;
+    content: "";
+    top: 8px;
+    width: 1px;
+    height: 10px;
+    background: #000;
+    margin: 0 15px;
+}
+
+p#order_comments_field label:before{
+    right: -25px;
+    transform: rotate(140deg) !important;
+}
+
+p#order_comments_field label:after{
+    transform: rotate(45deg) !important;
+}
+
+p#order_comments_field.open label:before{
+    right: -25px;
+    transform: rotate(45deg) !important;
+}
+
+p#order_comments_field.open label:after{
+    transform: rotate(140deg) !important;
+}
+
+span.optional {
+    display: none;
+}
+
 .woocommerce-checkout .woocommerce-form-coupon-toggle {
     padding: 40px 0;
 }
