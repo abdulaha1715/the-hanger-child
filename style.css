@@ -1301,6 +1301,12 @@ input#coupon_code {
     border-radius: 0 !important;
 }
 
+.woocommerce-checkout-review-order-table th.product-total,
+.woocommerce-checkout-review-order-table td.product-total,
+.woocommerce-checkout-review-order-table tr.cart-subtotal td   {
+    text-align: right;
+    padding-right: 15px !important;
+}
 
 
 @media screen and (max-width:1023px) {
