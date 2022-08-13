@@ -1201,10 +1201,17 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
 
 /* shipping */
 
-ul#shipping_method {
-    border: 1px solid #a7a7a7;
-    border-radius: 10px;
+html.js_active.vc_desktop.vc_transform ul#shipping_method {
+    width: 125%;
+}
+
+html.js_active.vc_desktop.vc_transform.translated-ltr ul#shipping_method {
     width: 116%;
+}
+
+ul#shipping_method {
+    border-radius: 10px;
+    border: 1px solid #a7a7a7;
 }
 
 ul#shipping_method li label {
@@ -1231,15 +1238,16 @@ ul#shipping_method li small.tax_label {
 }
 
 input#shipmondo_zipcode_field_0 {
-    border-radius: 10px 0 0 10px;
+    background: transparent !important;
+    border-radius: 10px 0 0 10px !important;
 }
 
 input#shipmondo_find_shop_btn_0 {
     font-size: 12px;
-    padding: 14px 10px;
-    margin: 0 !important;
-    border-radius: 0 10px 10px 0;
     background: #5C6E7A;
+    margin: 0 !important;
+    padding: 14px 10px;
+    border-radius: 0 10px 10px 0 !important;
 }
 
 input#shipmondo_zipcode_field_0 {
@@ -1253,7 +1261,7 @@ input#shipmondo_zipcode_field_0 {
 }
 
 .shipmondo_stores div:first-child {
-    width: 95%;
+    width: 70%;
 }
 
 /* unchange */
