@@ -499,7 +499,7 @@ body.home .site-prefooter {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "";
+    content: "î¤Š";
     position: absolute;
     top: 0;
     right: 0;
@@ -1199,6 +1199,62 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
     transform: translateX(-50%);
 }
 
+/* shipping */
+
+ul#shipping_method {
+    border: 1px solid #a7a7a7;
+    border-radius: 10px;
+    width: 116%;
+}
+
+ul#shipping_method li label {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+ul#shipping_method li {
+    border-bottom: 1px solid #a7a7a7;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+ul#shipping_method li:last-child {
+    border-bottom: none;
+}
+
+ul#shipping_method li small.tax_label {
+    display: none;
+}
+
+.shipmondo_stores {
+    display: flex;
+}
+
+input#shipmondo_zipcode_field_0 {
+    border-radius: 10px 0 0 10px;
+}
+
+input#shipmondo_find_shop_btn_0 {
+    font-size: 12px;
+    padding: 14px 10px;
+    margin: 0 !important;
+    border-radius: 0 10px 10px 0;
+    background: #5C6E7A;
+}
+
+input#shipmondo_zipcode_field_0 {
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    height: 44px;
+}
+
+.shipmondo_stores div {
+    width: 100%;
+}
+
+.shipmondo_stores div:first-child {
+    width: 95%;
+}
 
 /* unchange */
 .single-product .product .cart .quantity input {
