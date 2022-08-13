@@ -73,4 +73,9 @@ jQuery(document).ready(function($){
 	jQuery("#order_comments_field").click(function(){
 		jQuery("#order_comments_field").toggleClass("open");
 	});
+
+	// order comment toogle class
+	jQuery("#ship-to-different-address :checkbox").on('click', function(){
+	    jQuery("#order_review").toggleClass("ship-a-open");
+	});
 });
