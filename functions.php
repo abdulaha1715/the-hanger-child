@@ -196,26 +196,84 @@ if  ( ! function_exists('add_continue_shopping_button_to_cart') ) {
 /**
  * Why shop here shortcode
  */
-function ab_why_shop_here( $atts ) {
-    return '<div class="home-below-hero">
-            <div class="site-prefooter row small-collapse">
+function ab_why_shop_here( $atts, $content, $shortcode ) {
+    $atts = shortcode_atts( array(
+        'f_widget_title'     => __( 'GRATIS FRAGT', 'the-hanger' ),
+        'f-widget-subtitle'  => __( 'Ved køb over 399,-', 'the-hanger' ),
+        's-widget-title'     => __( 'HURTIG LEVERING', 'the-hanger' ),
+        's-widget-subtitle'  => __( 'Vi sender alle hverdage', 'the-hanger' ),
+        'th-widget-title'    => __( 'UDVIDET RETURRET', 'the-hanger' ),
+        'th-widget-subtitle' => __( '30-dages fuld returret', 'the-hanger' ),
+        'fo-widget-title'    => __( 'SIKKER BETALING', 'the-hanger' ),
+        'fo-widget-subtitle' => __( 'Betalingskort og MobilePay', 'the-hanger' ),
+    ), $atts );
 
+    ?>
+    <div class="home-below-hero">
+        <div class="site-prefooter row small-collapse">
             <div class="prefooter-content">
-
                 <aside class="widget-area">
-
                     <div class="row small-up-1 medium-up-2 large-up-4">
-                        <div class="column"><aside id="theme_ecommerce_info-1" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-2"></i></div><h4 class="widget-title">Gratis fragt</h4></div><div class="ecommerce-info-widget-subtitle">Ved køb over 399,-</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-2" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_box-transport"></i></div><h4 class="widget-title">Hurtig levering</h4></div><div class="ecommerce-info-widget-subtitle">Vi sender alle hverdage</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-3" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ui_star"></i></div><h4 class="widget-title">Udvidet returret </h4></div><div class="ecommerce-info-widget-subtitle">30-dages fuld returret</div></div></aside></div><div class="column"><aside id="theme_ecommerce_info-4" class="widget widget_theme_ecommerce_info"><div class="ecommerce-info-widget-txt-wrapper"><div class="ecommerce-info-widget-title"><div class="ecommerce-info-widget-icon"><i class="thehanger-icons-ecommerce_credit-card"></i></div><h4 class="widget-title">Sikker betaling </h4></div><div class="ecommerce-info-widget-subtitle">Betalingskort og MobilePay</div></div></aside></div>                         </div>
-
+                        <div class="column">
+                            <aside id="theme_ecommerce_info-1" class="widget widget_theme_ecommerce_info">
+                                <div class="ecommerce-info-widget-txt-wrapper">
+                                    <div class="ecommerce-info-widget-title">
+                                        <div class="ecommerce-info-widget-icon">
+                                            <i class="thehanger-icons-ecommerce_box-2"></i>
+                                        </div>
+                                        <h4 class="widget-title"><?php echo esc_attr($atts['f_widget_title']); ?></h4>
+                                    </div>
+                                    <div class="ecommerce-info-widget-subtitle"><?php echo esc_attr($atts['f-widget-subtitle']); ?></div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside id="theme_ecommerce_info-2" class="widget widget_theme_ecommerce_info">
+                                <div class="ecommerce-info-widget-txt-wrapper">
+                                    <div class="ecommerce-info-widget-title">
+                                        <div class="ecommerce-info-widget-icon">
+                                            <i class="thehanger-icons-ecommerce_box-transport"></i>
+                                        </div>
+                                        <h4 class="widget-title"><?php echo esc_attr($atts['s-widget-title']); ?></h4>
+                                    </div>
+                                    <div class="ecommerce-info-widget-subtitle"><?php echo esc_attr($atts['s-widget-subtitle']); ?></div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside id="theme_ecommerce_info-3" class="widget widget_theme_ecommerce_info">
+                                <div class="ecommerce-info-widget-txt-wrapper">
+                                    <div class="ecommerce-info-widget-title">
+                                        <div class="ecommerce-info-widget-icon">
+                                            <i class="thehanger-icons-ui_star"></i>
+                                        </div>
+                                        <h4 class="widget-title"><?php echo esc_attr($atts['th-widget-title']); ?></h4>
+                                    </div>
+                                    <div class="ecommerce-info-widget-subtitle"><?php echo esc_attr($atts['th-widget-subtitle']); ?></div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside id="theme_ecommerce_info-4" class="widget widget_theme_ecommerce_info">
+                                <div class="ecommerce-info-widget-txt-wrapper">
+                                    <div class="ecommerce-info-widget-title">
+                                        <div class="ecommerce-info-widget-icon">
+                                            <i class="thehanger-icons-ecommerce_credit-card"></i>
+                                        </div><h4 class="widget-title"><?php echo esc_attr($atts['fo-widget-title']); ?></h4>
+                                    </div>
+                                    <div class="ecommerce-info-widget-subtitle"><?php echo esc_attr($atts['fo-widget-subtitle']); ?></div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
                 </aside>
-
                 <div class="hover_overlay_footer"></div>
-
             </div>
         </div>
-
-    </div>';
+    </div>
+    <?php
 }
+
 add_shortcode( 'why_shop_here', 'ab_why_shop_here' );
 
 /**
