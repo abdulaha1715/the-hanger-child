@@ -181,97 +181,17 @@ add_action('header_free_shipping_banner', 'header_free_shipping_banner_yellow_ba
 add_action( 'woocommerce_after_cart_totals', 'add_continue_shopping_button_to_cart' );
 if  ( ! function_exists('add_continue_shopping_button_to_cart') ) :
     function add_continue_shopping_button_to_cart() {
-    $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
-    if (!empty($shop_page_url)):
+        $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+        if (!empty($shop_page_url)) {
 
-        $arrow_img = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow.png';
-        echo '<div class="continue-shopping">';
-        echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<img src="'.$arrow_img.'" alt="arrow-right"></a>';
-        echo '</div>';
-    endif;
-}
-endif;
-
-/**
-* WooCommerce: show all product attributes, separated by comma, on cart page
-*/
-function isa_woo_cart_attribute_values( $cart_item, $cart_item_key ) {
-  
-    $item_data  = $cart_item_key['data'];
-    $attributes = $item_data->get_attributes();
-      
-    if ( ! $attributes ) {
-        return $cart_item;
-    }
-      
-    $out = $cart_item . '<br /><p class="cart-p-attributes">';
-      
-    $count = count( $attributes );
-      
-    $i = 0;
-    foreach ( $attributes as $attribute ) {
-   
-        // skip variations
-        if ( $attribute->get_variation() ) {
-            continue;
-        }
-   
-        $name = $attribute->get_name();          
-        if ( $attribute->is_taxonomy() ) {
- 
-            $product_id = $item_data->get_id();
-            $terms      = wp_get_post_terms( $product_id, $name, 'all' );
-               
-            // get the taxonomy
-            $tax = $terms[0]->taxonomy;
-               
-            // get the tax object
-            $tax_object = get_taxonomy($tax);
-               
-            // get tax label
-            if ( isset ( $tax_object->labels->singular_name ) ) {
-                $tax_label = $tax_object->labels->singular_name;
-            } elseif ( isset( $tax_object->label ) ) {
-                $tax_label = $tax_object->label;
-                // Trim label prefix since WC 3.0
-                $label_prefix = 'Product ';
-                if ( 0 === strpos( $tax_label,  $label_prefix ) ) {
-                    $tax_label = substr( $tax_label, strlen( $label_prefix ) );
-                }
-            }
-            $out .= '<span>'. $tax_label . ': </span>';
- 
-            $tax_terms = array();              
-            foreach ( $terms as $term ) {
-                $single_term =  esc_html( $term->name ); 
-                array_push( $tax_terms, $single_term );
-            }
-            $out .= implode(', ', $tax_terms);
-              
-            if ( $count > 1 && ( $i < ($count - 1) ) ) {
-                $out .= '</br>';
-            }
-          
-            $i++;
-            // end for taxonomies
-      
-        } else {
-  
-            // not a taxonomy
-            $out .= '<span>'.  $name . ': </span>';
-            $out .= esc_html( implode( ', ', $attribute->get_options() ) );
-          
-            if ( $count > 1 && ( $i < ($count - 1) ) ) {
-                $out .= '</br>';
-            }
-          
-            $i++;
+            $arrow_img = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow.png';
+            
+            echo '<div class="continue-shopping">';
+            echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<img src="'.$arrow_img.'" alt="arrow-right"></a>';
+            echo '</div>';
         }
     }
-    echo $out.= '</p>';
 }
-
-add_filter( 'woocommerce_cart_item_name', 'isa_woo_cart_attribute_values', 10, 2 );
 
 /**
  * Why shop here shortcode
