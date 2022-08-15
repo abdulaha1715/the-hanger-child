@@ -108,6 +108,7 @@ ul {
 
 .woocommerce-notices-wrapper p {
     margin: 0 !important;
+    margin-top: -2px !important;
 }
 
 .site-free-shipping-banner {
