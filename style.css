@@ -951,7 +951,7 @@ input#shipping_phone {
     width: 65%;
     margin: 0 !important;
     background: #d5e1e1;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 p.form-row.form-row-wide.mailchimp-newsletter {
@@ -1159,7 +1159,7 @@ p.woocommerce-customer-details--phone, p.woocommerce-customer-details--email {
 
 input {
     background: #d5e1e1 !important;
-    border-radius: 10px !important;
+    border-radius: 5px !important;
 }
 
 button,
@@ -1167,7 +1167,7 @@ a.vc_general,
 a.button.checkout.wc-forward,
 a.checkout-button.button.alt.wc-forward,
 .woocommerce-checkout-payment .place-order .button {
-    border-radius: 10px !important;
+    border-radius: 5px !important;
 }
 
 section.yikes-mailchimp-form-description {
@@ -1237,7 +1237,7 @@ html.js_active.vc_desktop.vc_transform.translated-ltr ul#shipping_method {
 }
 
 ul#shipping_method {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #a7a7a7;
 }
 
@@ -1266,7 +1266,7 @@ ul#shipping_method li small.tax_label {
 
 input#shipmondo_zipcode_field_0 {
     background: transparent !important;
-    border-radius: 10px 0 0 10px !important;
+    border-radius: 5px 0 0 5px !important;
 }
 
 input#shipmondo_find_shop_btn_0 {
@@ -1274,7 +1274,7 @@ input#shipmondo_find_shop_btn_0 {
     background: #5C6E7A !important;
     margin: 0 !important;
     padding: 14px 10px;
-    border-radius: 0 10px 10px 0 !important;
+    border-radius: 0 5px 5px 0 !important;
 }
 
 input#shipmondo_zipcode_field_0 {
