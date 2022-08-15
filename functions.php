@@ -364,3 +364,14 @@ function shipping_email_checkout_fields( $fields ) {
      return $fields;
 }
 add_filter( 'woocommerce_checkout_fields' , 'shipping_email_checkout_fields' );
+
+/**
+ * Woocommerce placeholder img
+ */
+function dev_custom_woocommerce_placeholder_img_src( $src ) {
+    // replace with path to your image
+    $src = get_stylesheet_directory_uri() . '/images/no-product-image.png';
+     
+    return $src;
+}
+add_filter('woocommerce_placeholder_img_src', 'dev_custom_woocommerce_placeholder_img_src', 50);

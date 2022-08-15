@@ -1336,6 +1336,10 @@ input#coupon_code {
     padding-right: 15px !important;
 }
 
+.single-product .woocommerce-product-gallery__image--placeholder img {
+    width: 70%;
+}
+
 
 @media screen and (min-width:1024px) {
     .woocommerce-checkout-review-order.ship-a-open {
