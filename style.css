@@ -1118,6 +1118,30 @@ td.woocommerce-table__product-total.product-total,
     padding-right: 14% !important;
     text-align: right;
 }
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-table--order-details span.woocommerce-Price-amount.amount,
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr td .amount {
+    display: block;
+}
+
+.woocommerce-table--order-details .includes_tax {
+  display: flex;
+  justify-content: end;
+}
+.woocommerce-table--order-details .includes_tax .woocommerce-Price-amount.amount {
+  padding: 0 5px;
+}
+
+
+@media print, screen and (min-width: 64em) {
+    body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr th {
+        width: 70% !important;
+    }
+    body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr td {
+        width: 30% !important;
+    }
+}
+
 /* order customer details */
 p.woocommerce-customer-details--phone {
     margin-top: 5px !important;
@@ -1188,7 +1212,9 @@ nav.kundeservice a.wp-block-navigation-item__content {
 
 nav.kundeservice a.wp-block-navigation-item__content:after {
     position: absolute;
-    content: ">";
+    content: "\e906";
+    font-size: 10px;
+    font-family: 'the-hanger' !important;
     width: 40px;
     height: 40px;
     line-height: 40px;
