@@ -375,3 +375,10 @@ function dev_custom_woocommerce_placeholder_img_src( $src ) {
     return $src;
 }
 add_filter('woocommerce_placeholder_img_src', 'dev_custom_woocommerce_placeholder_img_src', 50);
+
+function dev_custom_woocommerce_placeholder_img( $image_html, $size, $dimensions ){
+    $image = get_stylesheet_directory_uri() . '/images/no-product-image.png';
+    $image_html = '<img src="' . esc_attr( $image ) .'" alt="' . esc_attr__( 'Placeholder Img', 'woocommerce' ) . '" width="' . esc_attr( $dimensions['width'] ) . '" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" height="' . esc_attr( $dimensions['height'] ) . '" />';
+    return $image_html;
+}
+add_filter('woocommerce_placeholder_img', 'dev_custom_woocommerce_placeholder_img', 10, 3);
