@@ -304,7 +304,7 @@ add_shortcode( 'why_shop_here', 'ab_why_shop_here' );
 function theme_cart_entry_header() {
     ?>
     <header class="cart entry-header">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <h1 class="entry-title"><?php echo __('Indkøbskurv', 'woocommerce'); ?></h1>
     </header><!-- .entry-header -->
     <?php
 }
