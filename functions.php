@@ -364,24 +364,3 @@ function shipping_email_checkout_fields( $fields ) {
      return $fields;
 }
 add_filter( 'woocommerce_checkout_fields' , 'shipping_email_checkout_fields' );
-
-function display_checkout_right_payment() {
-   ?> 
-    <div class="checkout-right-shipping">
-        <h3 id="delivery-method">
-            <?php esc_html_e( 'Leveringsmetode', 'woocommerce' ); ?>
-        </h3>
-        <?php do_action('checkout_right_shipping'); ?>
-    </div>
-
-    <div class="checkout-right-payment">
-        <h3 id="payment">
-            <?php esc_html_e( 'Betaling', 'woocommerce' ); ?>
-        </h3>
-        <?php do_action('checkout_right_payment'); ?>
-    </div>
-   <?php
-}
-add_action( 'woocommerce_before_order_notes', 'display_checkout_right_payment' );
-
-add_action( 'checkout_right_payment', 'woocommerce_checkout_payment' );
