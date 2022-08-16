@@ -1364,8 +1364,16 @@ body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-
     text-transform: inherit;
 }
 
+p.cart-empty {
+    margin-top: 80px !important;
+}
+
 
 @media screen and (min-width:1024px) {
+    .topbar {
+        display: block !important;
+    }
+    
     .woocommerce-checkout-review-order.ship-a-open {
         position: relative;
     }
