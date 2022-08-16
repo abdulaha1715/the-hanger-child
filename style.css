@@ -10,11 +10,6 @@ Version: 1.0.6
 Updated: 2022-01-20 11:04:43
 */
 
-/* Styles for the page as post template------------------------------------------------------------ */
-.page_as_post_header {
-    margin-top: 30px;
-}
-
 /* why does the general themes style for bullets not get added by default check about page and compare with bullets in a post. https://historienomdig.dk/om-os/
 */
 .entry-content p,
@@ -1368,12 +1363,19 @@ p.cart-empty {
     margin-top: 80px !important;
 }
 
+.page_as_post_header p#breadcrumbs {
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    font-family: Comfortaa, Sans-serif;
+}
+
 
 @media screen and (min-width:1024px) {
     .topbar {
         display: block !important;
     }
-    
+
     .woocommerce-checkout-review-order.ship-a-open {
         position: relative;
     }
