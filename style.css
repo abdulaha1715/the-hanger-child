@@ -1381,11 +1381,6 @@ p.cart-empty {
     height: 580px !important;
 }
 
-.home .slider-content-wrapper,
-.home-slider .slider-content-wrapper {
-    width: 50% !important;
-}
-
 .home .shortcode_getbowtied_slider .swiper-slide.center-align .slider-content .slider-content-wrapper,
 .shortcode_getbowtied_slider .swiper-slide.center-align .slider-content .slider-content-wrapper {
     margin-right: 0 !important;
@@ -1435,6 +1430,11 @@ p.cart-empty {
 
     .woocommerce-checkout-review-order.ship-a-open:after {
         height: calc(100% + 582px);
+    }
+
+    .home .slider-content-wrapper,
+    .home-slider .slider-content-wrapper {
+        width: 50% !important;
     }
 }
 
