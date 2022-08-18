@@ -849,7 +849,7 @@ body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content
     margin-bottom: 0 !important;
 }
 
-/*.woocommerce-checkout-review-order:after,*/
+.woocommerce-checkout-review-order:after,
 .cart-collaterals:after {
     position: absolute;
     content: "";
