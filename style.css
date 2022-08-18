@@ -206,6 +206,7 @@ ul#shipping_method li input {
     width: 15px;
     margin-bottom: 0 !important;
     display: inline;
+    font-weight: 500;
 }
 
 ul#shipping_method li label {
@@ -1243,8 +1244,12 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
 
 /* shipping */
 
-ul#shipping_method {
+body.woocommerce-cart .cart-collaterals ul#shipping_method {
     width: 160%;
+}
+
+.checkout.woocommerce-checkout ul#shipping_method {
+    width: 142%;
 }
 
 /*html.js_active.vc_desktop.vc_transform.translated-ltr ul#shipping_method {
