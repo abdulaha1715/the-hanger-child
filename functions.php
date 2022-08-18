@@ -332,3 +332,18 @@ function dev_custom_woocommerce_placeholder_img( $image_html, $size, $dimensions
     return $image_html;
 }
 add_filter('woocommerce_placeholder_img', 'dev_custom_woocommerce_placeholder_img', 10, 3);
+
+/**
+ * checkout right payment
+ */
+function display_checkout_right_payment() {
+   ?>
+    <div class="checkout-right-payment">
+        <h3 id="payment">
+            <?php esc_html_e( 'Betaling', 'woocommerce' ); ?>
+        </h3>
+        <?php do_action('checkout_right_payment'); ?>
+    </div>
+   <?php
+}
+add_action( 'woocommerce_before_order_notes', 'display_checkout_right_payment' );
