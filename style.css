@@ -208,7 +208,7 @@ ul#shipping_method li label {
     display: list-item;
     margin-left: 20px;
     line-height: 18px;
-    margin-top: -23px;
+    margin-top: -20px;
 }
 
 ul#shipping_method li .shipping_pickup_cart {

@@ -347,3 +347,11 @@ function display_checkout_right_payment() {
    <?php
 }
 add_action( 'woocommerce_before_order_notes', 'display_checkout_right_payment' );
+
+/**
+ * Shipment title
+ */
+function custom_shipping_package_name( $name ) {
+    return 'Forsendelsesmetode';
+}
+add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
