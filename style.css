@@ -1281,8 +1281,13 @@ ul#shipping_method li small.tax_label {
     display: none;
 }
 
+.shipmondo-modal-wrapper {
+    font-family: Comfortaa, Sans-serif;
+}
+
 .shipmondo_stores {
     display: inline-block;
+    width: 100%;
 }
 
 .shipmondo_stores div {
