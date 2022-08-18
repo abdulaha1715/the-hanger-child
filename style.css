@@ -1282,34 +1282,35 @@ ul#shipping_method li small.tax_label {
 }
 
 .shipmondo_stores {
-    display: flex;
+    display: inline-block;
 }
 
 input#shipmondo_zipcode_field_0 {
     background: transparent !important;
-    border-radius: 5px 0 0 5px !important;
+    border-radius: 5px !important;
 }
 
-input#shipmondo_find_shop_btn_0 {
-    font-size: 12px;
-    background: #5C6E7A !important;
-    margin: 0 !important;
-    padding: 14px 10px;
-    border-radius: 0 5px 5px 0 !important;
-}
 
 input#shipmondo_zipcode_field_0 {
     padding: 6px 10px !important;
     margin: 0 !important;
     height: 44px;
 }
+input#shipmondo_find_shop_btn_0 {
+    font-size: 12px;
+    background: #5C6E7A !important;
+    margin: 0 !important;
+    padding: 14px 12px;
+    border-radius: 5px !important;
+    text-transform: inherit;
+}
 
 .shipmondo_stores div {
-    width: 100%;
+    display: inline-block;
 }
 
 .shipmondo_stores div:first-child {
-    width: 70%;
+    width: 35%;
 }
 
 .woocommerce-checkout tr.cart_item small.tax_label,
