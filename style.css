@@ -1425,14 +1425,17 @@ p.cart-empty {
         padding-right: 5.25rem !important;
     }
 
-/*body.woocommerce-cart .cart-collaterals {
-    padding-left: calc(3.75rem - 22px) !important;
-    padding-right: 22px !important;
-}*/
+    /*
+    body.woocommerce-cart .cart-collaterals {
+        padding-left: calc(3.75rem - 22px) !important;
+        padding-right: 22px !important;
+    }
+    */
 
-.woocommerce-checkout-review-order:after, .cart-collaterals:after {
-    left: 410px;
-}
+    .woocommerce-checkout-review-order:after,
+    .cart-collaterals:after {
+        left: 410px;
+    }
 }
 
 @media screen and (max-width:1279px) {
@@ -1440,6 +1443,7 @@ p.cart-empty {
     body.woocommerce-cart .woocommerce .woocommerce-cart-form tr:not(.cart_item) td.actions .coupon {
         width: 60% !important;
     }
+
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -1456,7 +1460,8 @@ p.cart-empty {
         padding-right: 2rem !important;
     }
 
-    .woocommerce-checkout-review-order:after, .cart-collaterals:after {
+    .woocommerce-checkout-review-order:after,
+    .cart-collaterals:after {
         left: 490px;
     }
 
@@ -1509,6 +1514,35 @@ p.cart-empty {
         padding-right: 0 !important;
         border-bottom: none !important;
     }
+
+    body.woocommerce-cart .woocommerce .woocommerce-cart-form {
+        width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    body.woocommerce-cart .cart-collaterals {
+        width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 52% !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    body.woocommerce-cart .cart-collaterals {
+        width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .woocommerce-checkout-review-order:after,
+    .cart-collaterals:after {
+        left: 740px !important;
+    }
+
+    body.woocommerce-cart .woocommerce .woocommerce-cart-form tr:not(.cart_item) td.actions .coupon {
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -1523,4 +1557,3 @@ p.cart-empty {
         margin-bottom: 8px !important;
     }
 }
-
