@@ -1290,6 +1290,10 @@ ul#shipping_method li small.tax_label {
     width: 100%;
 }
 
+.selected_shop_context, .shipmondo_zipcode_error_text, .shipping_company_required {
+    margin-bottom: 0 !important;
+}
+
 .shipmondo_stores div {
     display: inline-block;
     width: 64%;

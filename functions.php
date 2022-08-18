@@ -348,6 +348,8 @@ function display_checkout_right_payment() {
 }
 add_action( 'woocommerce_before_order_notes', 'display_checkout_right_payment' );
 
+add_action( 'checkout_right_payment', 'woocommerce_checkout_payment' );
+
 /**
  * Shipment title
  */
