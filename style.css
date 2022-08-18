@@ -1249,7 +1249,7 @@ body.woocommerce-cart .cart-collaterals ul#shipping_method {
 }
 
 .checkout.woocommerce-checkout ul#shipping_method {
-    width: 145%;
+    width: 150%;
 }
 
 /*html.js_active.vc_desktop.vc_transform.translated-ltr ul#shipping_method {
@@ -1454,6 +1454,11 @@ body.woocommerce-checkout .woocommerce form.checkout .col2-set {
 
 body.woocommerce-checkout .woocommerce form.checkout .woocommerce-checkout-review-order {
     padding-right: 5.25rem !important;
+}
+
+.woocommerce-shipping-destination,
+.woocommerce-shipping-calculator {
+  display: none;
 }
 
 
