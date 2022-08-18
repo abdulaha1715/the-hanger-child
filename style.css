@@ -1409,6 +1409,59 @@ p.cart-empty {
 }
 
 
+@media screen and (max-width:1334px) {
+
+    .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.woocommerce-cart .woocommerce .woocommerce-cart-form {
+        padding-left: 5.25rem !important;
+
+    }
+
+    body.woocommerce-cart .cart-collaterals {
+        padding-right: 5.25rem !important;
+    }
+
+/*body.woocommerce-cart .cart-collaterals {
+    padding-left: calc(3.75rem - 22px) !important;
+    padding-right: 22px !important;
+}*/
+
+.woocommerce-checkout-review-order:after, .cart-collaterals:after {
+    left: 410px;
+}
+}
+
+@media screen and (max-width:1279px) {
+
+    body.woocommerce-cart .woocommerce .woocommerce-cart-form tr:not(.cart_item) td.actions .coupon {
+        width: 60% !important;
+    }
+    .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.woocommerce-cart .woocommerce .woocommerce-cart-form {
+        width: 60% !important;
+        padding-left: 2rem !important;
+    }
+
+    body.woocommerce-cart .cart-collaterals {
+        width: 40% !important;
+        padding-left: 65px !important;
+        padding-right: 2rem !important;
+    }
+
+    .woocommerce-checkout-review-order:after, .cart-collaterals:after {
+        left: 490px;
+    }
+
+}
+
 @media screen and (min-width:1024px) {
     .topbar {
         display: block !important;
