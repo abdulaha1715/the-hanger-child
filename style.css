@@ -1520,6 +1520,16 @@ body.woocommerce-cart .continue-shopping a:hover .hover-arrow {
     margin-top: 0 !important;
 }
 
+body.woocommerce-checkout .woocommerce .woocommerce-checkout-payment .payment_methods .wc_payment_method:last-child {
+    padding-bottom: 0 !important;
+}
+
+body.woocommerce-checkout .woocommerce .woocommerce-checkout-payment .payment_methods label img {
+    margin: 0 4px;
+    float: right;
+}
+
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
