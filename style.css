@@ -378,6 +378,14 @@ body.home .site-prefooter {
     padding-right: 5%
 }
 
+.single-product .product .cart .button:before {
+    display: none;
+}
+
+.single-product button.single_add_to_cart_button.button.alt {
+    padding: 0 2.5rem 0 2rem !important;
+}
+
 @media screen and (min-width:80em) {
     .header-line-1-wrapper .header-search-below {
         padding-right: 20%

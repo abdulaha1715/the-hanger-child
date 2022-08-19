@@ -358,3 +358,21 @@ function custom_shipping_package_name( $name ) {
     return 'Forsendelsesmetode';
 }
 add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
+
+// Change "Add to Cart" > "Add to Bag" in Shop Page
+function woocommerce_shop_page_add_to_cart_callback() {
+    return __( 'Læg i kurven', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_shop_page_add_to_cart_callback', 50 );  
+
+// Single Product
+add_filter( 'single_add_to_cart_text', 'custom_single_add_to_cart_text' );
+function custom_single_add_to_cart_text() {
+    return __( 'Læg i kurven', 'woocommerce' );
+}
+
+// Change "Add to Cart" > "Add to Bag" in Single Page
+function woocommerce_single_page_add_to_cart_callback() {
+    return __( 'Læg i kurven', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_single_page_add_to_cart_callback' ); 
