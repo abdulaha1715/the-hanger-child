@@ -1461,6 +1461,22 @@ body.woocommerce-checkout .woocommerce form.checkout .woocommerce-checkout-revie
   display: none;
 }
 
+body.woocommerce-cart .continue-shopping a {
+    transition: 0.3s !important;
+}
+
+body.woocommerce-cart .continue-shopping .hover-arrow {
+    display: none;
+    transition: 0.3s;
+}
+
+body.woocommerce-cart .continue-shopping a:hover .normal-arrow {
+    display: none;
+}
+
+body.woocommerce-cart .continue-shopping a:hover .hover-arrow {
+    display: inline-block;
+}
 
 @media screen and (max-width:1334px) {
 

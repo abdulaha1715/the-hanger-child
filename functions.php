@@ -184,10 +184,11 @@ if  ( ! function_exists('add_continue_shopping_button_to_cart') ) {
         $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
         if (!empty($shop_page_url)) {
 
-            $arrow_img = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow.png';
+            $arrow_img       = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow.png';
+            $hover_arrow_img = get_stylesheet_directory_uri() . '/images/continue-shopping-arrow-hover.png';
 
             echo '<div class="continue-shopping">';
-            echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<img src="'.$arrow_img.'" alt="arrow-right"></a>';
+            echo ' <a href="'.$shop_page_url.'" class="button">'.__('Continue shopping', 'woocommerce').'<img class="normal-arrow" src="'.$arrow_img.'" alt="arrow-right"><img class="hover-arrow" src="'.$hover_arrow_img.'" alt="arrow-right"></a>';
             echo '</div>';
         }
     }
