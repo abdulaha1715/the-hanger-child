@@ -386,6 +386,10 @@ body.home .site-prefooter {
     padding: 0 2.5rem 0 2rem !important;
 }
 
+tr.woocommerce-cart-form__cart-item.cart_item .awdr_cart_strikeout_line ins {
+    margin-left: -3px !important;
+}
+
 @media screen and (min-width:80em) {
     .header-line-1-wrapper .header-search-below {
         padding-right: 20%
@@ -957,8 +961,28 @@ input#shipping_email,
 input#shipping_phone {
     width: 65%;
     margin: 0 !important;
-    background: #d5e1e1;
+    background: #fbfcfc;
     border-radius: 5px;
+    border: 1px solid #5c6e79;
+}
+
+input#billing_first_name:focus,
+input#billing_last_name:focus,
+input#billing_address_1:focus,:focus,
+input#billing_postcode:focus,
+input#billing_city:focus,
+input#billing_email:focus,
+input#billing_phone:focus,
+input#shipping_first_name:focus,
+input#shipping_last_name:focus,
+input#shipping_company:focus,
+input#shipping_country:focus,
+input#shipping_address_1:focus,
+input#shipping_postcode:focus,
+input#shipping_city:focus,
+input#shipping_email:focus,
+input#shipping_phone:focus {
+    background: #d5e1e1;
 }
 
 p.form-row.form-row-wide.mailchimp-newsletter {
@@ -1179,8 +1203,12 @@ p.woocommerce-customer-details--email {
 /* requirement 9 style */
 
 input {
-    background: #d5e1e1 !important;
+    background: #fbfcfc;
     border-radius: 5px !important;
+}
+
+input:focus {
+    background: #d5e1e1;
 }
 
 button,
@@ -1224,7 +1252,7 @@ nav.kundeservice a.wp-block-navigation-item__content {
     margin: 0;
     display: block;
     text-align: center;
-    padding: 80px 0 140px;
+    padding: 40px 0 140px;
     font-size: 18px;
     font-weight: 600;
     position: relative;
@@ -1239,7 +1267,7 @@ nav.kundeservice a.wp-block-navigation-item__content:after {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background: #B6BFD0;
+    background: #000;
     border-radius: 50%;
     color: #ffffff;
     top: 64%;
@@ -1385,7 +1413,7 @@ input#coupon_code {
 }
 
 body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-quantity .quantity input {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .header-search-below .header_search_form .header_search_button_wrapper .header_search_button::after {
