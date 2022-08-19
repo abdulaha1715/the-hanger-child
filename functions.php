@@ -158,6 +158,18 @@ function beibi_labels_placeholders( $f ) {
 // Cart & Checkout page banner
 if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
     function header_free_shipping_banner_yellow_banner() {
+           
+        $free_shipping_settings   = get_option('woocommerce_free_shipping_1_settings');
+        $amount_for_free_shipping = $free_shipping_settings['min_amount'];
+
+        $cart                     = WC()->cart->subtotal;
+        $remaining                = $amount_for_free_shipping - $cart;
+
+        if( $amount_for_free_shipping > $cart ){
+            $notice = sprintf( "Add %s worth more products to get free shipping", wc_price($remaining));
+            wc_print_notice( $notice , 'notice' );
+        }
+
         ?>
         <div class="site-content-wrapper site-free-shipping-banner" style="margin-top: 0px;">
             <div class="row">
