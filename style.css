@@ -362,10 +362,6 @@ body.home .site-prefooter {
 }
 
 .header-search-below {
-    position: absolute;
-    top: 115%;
-    right: 0;
-    width: 340px;
     background: #fff;
     padding-right: 0 !important;
 }
@@ -693,16 +689,17 @@ body.home .site-prefooter {
 }
 
 .header-search-below {
+    display: none;
     visibility: hidden;
     opacity: 1;
-    top: 250px;
     transition: 0.3s;
 }
 
 .header-search-below.active-search {
-    visibility: visible;
+    top: 100%; 
     opacity: 1;
-    top: 115%;
+    visibility: visible;
+    display: block;
 }
 
 /*li.header-search-icon-below a span {
@@ -1513,6 +1510,13 @@ body.woocommerce-cart .continue-shopping a:hover .hover-arrow {
     .woocommerce-checkout-review-order:after,
     .cart-collaterals:after {
         left: 410px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .site-header-style-1 .header-search-below.active-search {
+        padding-left: 5.25rem !important;
+        padding-right: 5.25rem !important;
     }
 }
 

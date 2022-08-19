@@ -53,6 +53,15 @@
 
 								<ul class="header-tools">
 
+									<?php if ( GBT_Opt::getOption('header_search_toggle') == 1 ) : ?>
+										<li class="header-search-icon-below">
+											<a>
+												<i class="thehanger-icons-search"></i>
+												<span></span>
+											</a>
+										</li>
+									<?php endif; ?>
+
 									<?php if ( GETBOWTIED_WOOCOMMERCE_IS_ACTIVE ) : ?>
 									<?php if ( GBT_Opt::getOption('header_user_account') == 1 ) : ?>
 										<li class="header-account">
@@ -92,29 +101,6 @@
 										</li>
 									<?php endif; ?>
 									<?php endif; ?>
-
-									<?php if ( GBT_Opt::getOption('header_search_toggle') == 1 ) : ?>
-										<li class="header-search-icon-below">
-											<a>
-												<i class="thehanger-icons-search"></i>
-												<span></span>
-											</a>
-										</li>
-									<?php endif; ?>
-
-									<div class="header-search-below">
-
-										<?php
-											if ( GETBOWTIED_WOOCOMMERCE_IS_ACTIVE ) {
-												do_action('getbowtied_ajax_search_form');
-											} else {
-											 	if( ( 1 == GBT_Opt::getOption('header_search_toggle') && 'style-1' == GBT_Opt::getOption('header_template') ) ) {
-													get_search_form();
-												}
-											}
-										?>
-
-									</div>
 
 								</ul>
 
@@ -165,6 +151,20 @@
 			</div>
 
 			<div class="shop_header_placeholder"></div>
+
+		</div>
+
+		<div class="header-search-below">
+
+			<?php
+				if ( GETBOWTIED_WOOCOMMERCE_IS_ACTIVE ) {
+					do_action('getbowtied_ajax_search_form');
+				} else {
+				 	if( ( 1 == GBT_Opt::getOption('header_search_toggle') && 'style-1' == GBT_Opt::getOption('header_template') ) ) {
+						get_search_form();
+					}
+				}
+			?>
 
 		</div>
 
