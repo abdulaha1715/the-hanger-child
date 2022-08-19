@@ -1478,6 +1478,11 @@ body.woocommerce-cart .continue-shopping a:hover .hover-arrow {
     display: inline-block;
 }
 
+.header-mobiles-wrapper .header-mobiles .site-logo img {
+    display: block;
+    margin: 0 auto;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {

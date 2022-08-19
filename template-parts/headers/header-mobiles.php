@@ -10,12 +10,15 @@
 
 		<div class="header-mobiles-branding">
 
-			<?php if ( ! empty( GBT_Opt::getOption('header_alt_logo') ) ) : ?>
+			<?php 
+				if ( ! empty( GBT_Opt::getOption('header_alt_logo') ) ) : 
+				$historien_img = get_stylesheet_directory_uri() . '/images/historienomdig_logo.png';
+			?>
 
 				<div class="site-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img src="<?php echo esc_url( GBT_Opt::getOption('header_alt_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>">
-						<p class="site-title"><?php bloginfo( 'name' ); ?></p>
+						<img class="text-logo" src="<?php echo $historien_img; ?>" alt="historienomdig_logo">
 					</a>
 				</div>
 
