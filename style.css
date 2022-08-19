@@ -1483,6 +1483,10 @@ body.woocommerce-cart .continue-shopping a:hover .hover-arrow {
     margin: 0 auto;
 }
 
+.site-content-wrapper.site-free-shipping-banner {
+    margin-top: 0 !important;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
