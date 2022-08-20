@@ -388,3 +388,38 @@ function woocommerce_single_page_add_to_cart_callback() {
     return __( 'Læg i kurven', 'woocommerce' );
 }
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_single_page_add_to_cart_callback' ); 
+
+// Add product category class in body 
+function wc_product_cats_css_body_class( $classes ){
+    if ( is_singular( 'product' ) ) {
+        $current_product = wc_get_product();
+        $custom_terms    = get_the_terms( $current_product->get_id(), 'product_cat' );
+        
+        if ( $custom_terms ) {
+            foreach ( $custom_terms as $custom_term ) {
+                $classes[] = 'product_cat_' . $custom_term->slug;
+            }
+        }
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'wc_product_cats_css_body_class' );
+
+// Add book two image
+function woocommerce_single_product_book_two_image () {
+    ?>
+    <div class="two-image-product-images">
+        <div class="first-image">
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );  ?>
+                                        
+            <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+        </div>
+        <div class="secound-image">
+            <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+        </div>
+    </div>
+    <?php
+}
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_single_product_book_two_image' );
+
+
