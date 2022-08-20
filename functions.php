@@ -160,27 +160,24 @@ if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
     function header_free_shipping_banner_yellow_banner() {
            
         $free_shipping_settings   = get_option('woocommerce_free_shipping_1_settings');
-        $amount_for_free_shipping = $free_shipping_settings['min_amount'];
+        $amount_for_free_shipping = 20;
 
         $cart                     = WC()->cart->subtotal;
         $remaining                = $amount_for_free_shipping - $cart;
 
-        if( $amount_for_free_shipping > $cart ){
-            $notice = sprintf( "Add %s worth more products to get free shipping", wc_price($remaining));
-            wc_print_notice( $notice , 'notice' );
-        }
-
+        if ( $amount_for_free_shipping > $cart ) :
         ?>
         <div class="site-content-wrapper site-free-shipping-banner" style="margin-top: 0px;">
             <div class="row">
                 <p>
                 <?php 
-                    echo "x more and get free shipping"; 
+                    echo sprintf( "Add  %s worth more products to get free shipping", wc_price($remaining));
                 ?>
                 </p>
             </div>
         </div>
         <?php
+        endif;
     }
 }
 
