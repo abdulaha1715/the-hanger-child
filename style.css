@@ -274,8 +274,11 @@ p.cart-p-attributes span {
     position: relative;
 }
 
-.single-product .quantity-nav,
-.woocommerce-cart-form__contents .quantity-nav {
+.single-product .product .cart .quantity i {
+    display: none;
+}
+
+.quantity-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -284,61 +287,65 @@ p.cart-p-attributes span {
     border-left: 1px solid #D8DCDE !important;
 }
 
-.single-product .product .cart .quantity i {
-    display: none;
-}
-
-.quantity-button.quantity-up {
+.quantity-button button {
     position: absolute;
     top: 0;
     right: -1px;
     width: 29px;
     height: 30px;
-    cursor: pointer;
+    font-size: 12px;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #222;
+    background: transparent;
+    border-radius: 0 !important;
+}
+
+.quantity-button button.minus.qty {
+    top: 26px;
+    border: none;
+}
+
+.quantity-button button.plus.qty {
     border-bottom: 1px solid #D8DCDE !important;
 }
 
-.quantity-button.quantity-down {
-    position: absolute;
-    top: 28px;
-    right: -1px;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-}
-
-.quantity-button {
-    position: relative;
-}
-
-.quantity-button.quantity-up:before,
-.quantity-button.quantity-up:after {
+.quantity-button button.plus.qty:before, 
+.quantity-button button.plus.qty:after {
     position: absolute;
     content: "";
     background: #000;
     width: 1px;
     height: 12px;
-    top: 8px;
-    right: 14px;
+    top: 6px;
+    right: 12px;
     cursor: pointer;
 }
 
-.quantity-button.quantity-up:after {
-    top: 8px;
-    right: 14px;
+.quantity-button button.plus.qty:after {
+    top: 6px;
+    right: 12px;
     transform: rotate(90deg);
 }
 
-.quantity-button.quantity-down:after {
+.quantity-button button.minus.qty:after {
     position: absolute;
     content: "";
     background: #000;
     width: 1px;
     height: 12px;
-    top: 8px;
+    top: 10px;
     right: 14px;
     cursor: pointer;
     transform: rotate(90deg);
+}
+
+.single-product .quantity-button {
+    display: none;
+}
+
+.single-product .quantity .quantity-button {
+    display: block;
 }
 
 /* home site-prefooter */

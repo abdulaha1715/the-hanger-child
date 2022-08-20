@@ -389,7 +389,9 @@ function woocommerce_single_page_add_to_cart_callback() {
 }
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_single_page_add_to_cart_callback' ); 
 
-// Add product category class in body 
+/**
+ * Add product category class in body 
+ */
 function wc_product_cats_css_body_class( $classes ){
     if ( is_singular( 'product' ) ) {
         $current_product = wc_get_product();
@@ -405,7 +407,9 @@ function wc_product_cats_css_body_class( $classes ){
 }
 add_filter( 'body_class', 'wc_product_cats_css_body_class' );
 
-// Add book two image
+/**
+ * Add book two image 
+ */
 function woocommerce_single_product_book_two_image () {
     ?>
     <div class="two-image-product-images">
@@ -422,4 +426,61 @@ function woocommerce_single_product_book_two_image () {
 }
 add_action( 'woocommerce_before_single_product_summary', 'woocommerce_single_product_book_two_image' );
 
+/**
+ * Quantity button after input
+ */
+function wqb_product() { echo "
+    <div class='quantity-button'>
+        <button type='button' title='Decrease quantity' class='minus qty' onclick='wqb_action(0,-1)'></button>
+        <button type='button' title='Increase quantity' class='plus qty' onclick='wqb_action(0,1)'></button>
+    </div>";
+}
+add_action('woocommerce_after_add_to_cart_quantity','wqb_product');
 
+/**
+ * Cart Quantity button function
+ */
+function ab_cart_quantity_contents() { echo "
+    <script type='text/javascript'>
+    function wqb_init_cart() {
+        if(document.getElementsByClassName('minus').length>0) return;
+        var qty=document.getElementsByClassName('quantity');
+        if(!qty) return;
+        for(i=0; i<qty.length; i++) {
+            qty[i].innerHTML+=\"<div class='quantity-button'><button type='button' title='Decrease quantity' class='minus qty' onclick='wqb_action(\"+i+\",-1)'></button><button type='button' title='Increase quantity' class='plus qty' onclick='wqb_action(\"+i+\",1)'></button></div>\";
+        }
+    }
+    wqb_init_cart();
+    setInterval(function(){wqb_init_cart();},3000);
+    </script>";
+}
+add_action('woocommerce_after_cart','ab_cart_quantity_contents');
+
+/**
+ * Cart Quantity button function
+ */
+function ab_cart_quantity_action_assets() { 
+    echo "
+    <script type='text/javascript'>
+        function wqb_action(iteration,q) {
+            var qty=[].slice.call(document.querySelectorAll('div.quantity'));
+            if(!qty) return;
+            for(i=0; i<qty.length; i++) if(i==iteration) {
+                v=qty[i].childNodes[3];
+                if(!v) return;
+                if(v.value<=1 && q<1) return;
+                v.value=parseInt(v.value)+parseInt(q);
+            }
+            if(document.getElementsByName('update_cart').length>0) {
+                update_cart=document.getElementsByName('update_cart')[0];
+                update_cart.disabled=false;
+                update_cart.classList.add('update_cart');
+            } else {
+                var ev=new Event('change',{bubbles:true});
+                v.dispatchEvent(ev);
+            }
+        }
+    </script>";
+}
+add_action('woocommerce_after_cart_contents','ab_cart_quantity_action_assets');
+add_action('woocommerce_after_add_to_cart_quantity','ab_cart_quantity_action_assets');
