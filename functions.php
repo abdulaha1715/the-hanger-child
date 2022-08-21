@@ -160,7 +160,7 @@ if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
     function header_free_shipping_banner_yellow_banner() {
            
         $free_shipping_settings   = get_option('woocommerce_free_shipping_1_settings');
-        $amount_for_free_shipping = 20.00;
+        $amount_for_free_shipping = get_option( 'free_shipping_value' );
 
         $cart                     = WC()->cart->subtotal;
         $remaining                = $amount_for_free_shipping - $cart;
@@ -491,9 +491,61 @@ add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false');
 /**
 * WooCommerce: remove attribute name from title
 */
-add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes' );
 function variation_title_not_include_attributes( $boolean ){
     if ( ! is_cart() )
         $boolean = false;
     return $boolean;
+}
+add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes' );
+
+/**
+ * Add a new settings tab to the WooCommerce settings tabs array.
+ */
+function awr_woo_free_shipping_add_settings_tab( $settings_tabs ) {
+    $settings_tabs['settings_tab_demo'] = __( 'Free Shipping', 'woocommerce' );
+    return $settings_tabs;
+}
+add_filter( 'woocommerce_settings_tabs_array', 'awr_woo_free_shipping_add_settings_tab', 50 );
+
+/**
+ * Uses the WooCommerce admin fields API to output settings via the @see woocommerce_admin_fields() function.
+ */
+function awr_woo_free_shipping_settings_tab() {
+    woocommerce_admin_fields( ab_fs_get_settings() );
+}
+add_action( 'woocommerce_settings_tabs_settings_tab_demo', 'awr_woo_free_shipping_settings_tab' );
+
+/**
+ * Uses the WooCommerce options API to save settings via the @see woocommerce_update_options() function.
+ */
+function awr_woo_free_shipping_update_settings() {
+    woocommerce_update_options( ab_fs_get_settings() );
+}
+add_action( 'woocommerce_update_options_settings_tab_demo', 'awr_woo_free_shipping_update_settings' );
+
+/**
+ * Get all the settings for this plugin for @see woocommerce_admin_fields() function.
+ */
+function ab_fs_get_settings() {
+
+    $settings = array(
+        'section_title' => array(
+            'name'     => __( 'Free Shipping Setup', 'woocommerce' ),
+            'type'     => 'title',
+            'desc'     => '',
+            'id'       => 'free_shipping_tab_section_title'
+        ),
+        'title' => array(
+            'name' => __( 'Free Shipping Value', 'woocommerce' ),
+            'type' => 'number',
+            'desc' => __( 'Type Free Shipping Value here', 'woocommerce' ),
+            'id'   => 'free_shipping_value'
+        ),
+        'section_end' => array(
+            'type' => 'sectionend',
+            'id' => 'redirect_tab_section_end'
+        )
+    );
+
+    return apply_filters( 'wc_settings_tab_demo_settings', $settings );
 }
