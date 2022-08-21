@@ -160,7 +160,7 @@ if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
     function header_free_shipping_banner_yellow_banner() {
            
         $free_shipping_settings   = get_option('woocommerce_free_shipping_1_settings');
-        $amount_for_free_shipping = 20;
+        $amount_for_free_shipping = 20.00;
 
         $cart                     = WC()->cart->subtotal;
         $remaining                = $amount_for_free_shipping - $cart;
@@ -487,3 +487,13 @@ add_action('woocommerce_after_add_to_cart_quantity','ab_cart_quantity_action_ass
 */
 add_filter( 'woocommerce_producr_variation_title_include_attributes', '__return_false');
 add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false');
+
+/**
+* WooCommerce: remove attribute name from title
+*/
+add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes' );
+function variation_title_not_include_attributes( $boolean ){
+    if ( ! is_cart() )
+        $boolean = false;
+    return $boolean;
+}
