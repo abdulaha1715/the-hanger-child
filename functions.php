@@ -481,3 +481,7 @@ function ab_cart_quantity_action_assets() {
 }
 add_action('woocommerce_after_cart_contents','ab_cart_quantity_action_assets');
 add_action('woocommerce_after_add_to_cart_quantity','ab_cart_quantity_action_assets');
+
+add_filter( 'woocommerce_producr_variation_title_include_attributes', '__return_false');
+add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false');
+

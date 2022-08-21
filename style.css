@@ -1559,6 +1559,13 @@ body.single-product.product_cat_two-image-product .single-product .product_infos
     margin-bottom: 0 !important;
 }
 
+dl.variation p {
+    margin: 0 !important;
+}
+
+dl.variation dt {
+    text-transform: capitalize;
+}
 
 
 @media screen and (max-width:1334px) {
