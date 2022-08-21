@@ -1567,6 +1567,14 @@ dl.variation dt {
     text-transform: capitalize;
 }
 
+tr.woocommerce-cart-form__cart-item.cart_item {
+    color: #222;
+    font-family: Comfortaa, Sans-serif;
+}
+
+tr.woocommerce-cart-form__cart-item.cart_item td.product-name {
+    padding-right: 0 !important;
+}
 
 @media screen and (max-width:1334px) {
 
