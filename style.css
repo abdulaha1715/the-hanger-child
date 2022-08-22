@@ -1568,7 +1568,7 @@ dl.variation dt {
 }
 
 .woocommerce-checkout-review-order dl.variation {
-    display: none;
+    /*display: none;*/
 }
 
 tr.woocommerce-cart-form__cart-item.cart_item {

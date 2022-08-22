@@ -485,18 +485,22 @@ add_action('woocommerce_after_add_to_cart_quantity','ab_cart_quantity_action_ass
 /**
 * WooCommerce: Product attribute value with label in cart
 */
-add_filter( 'woocommerce_producr_variation_title_include_attributes', '__return_false');
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false');
 add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false');
 
 /**
 * WooCommerce: remove attribute name from title
 */
 function variation_title_not_include_attributes( $boolean ){
-    if ( ! is_cart() )
+    if ( is_page( 'cart' ) || is_cart() ) {
         $boolean = false;
+    } elseif ( is_page( 'checkout' ) || is_checkout() ) {
+        $boolean = true;
+    }
+    
     return $boolean;
 }
-add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes' );
+// add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes', 50 );
 
 /**
  * Add a new settings tab to the WooCommerce settings tabs array.
