@@ -75,11 +75,15 @@
 			</div>
 
 			<?php get_template_part( 'template-parts/headers/header-mobiles' ) ?>
+		
+		<div class="site-free-shipping-banner" style="margin-top: 0px;">
+            
+			<?php 
+				endif; 
+				if( is_page( 'cart' ) || is_page( 'checkout' ) ) {
+					do_action('header_free_shipping_banner');
+				}
+			?>
 
-		<?php 
-			endif; 
-			if( is_page( 'cart' ) || is_page( 'checkout' ) ) {
-				do_action('header_free_shipping_banner');
-			}
-		?>
+        </div>
 		<div class="site-content-wrapper">

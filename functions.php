@@ -153,35 +153,15 @@ function beibi_labels_placeholders( $f ) {
 }
 
 //Checkout - move billing to first column
-// ref - https://www.ibenic.com/move-payments-woocommerce-checkout/
-
-// Cart & Checkout page banner
-if ( ! function_exists( 'header_free_shipping_banner_yellow_banner' ) ) {
-    function header_free_shipping_banner_yellow_banner() {
-           
-        $free_shipping_settings   = get_option('woocommerce_free_shipping_1_settings');
-        $amount_for_free_shipping = get_option( 'free_shipping_value' );
-
-        $cart                     = WC()->cart->subtotal;
-        $remaining                = $amount_for_free_shipping - $cart;
-
-        if ( $amount_for_free_shipping > $cart ) :
-        ?>
-        <div class="site-content-wrapper site-free-shipping-banner" style="margin-top: 0px;">
-            <div class="row">
-                <p>
-                <?php 
-                    echo sprintf( "Add  %s worth more products to get free shipping", wc_price($remaining));
-                ?>
-                </p>
-            </div>
-        </div>
-        <?php
-        endif;
+function my_theme_plugins_loaded_is_loaded() {
+    if ( function_exists( 'my_theme_function' ) ) {
+        my_theme_function();
+        add_action('header_free_shipping_banner', 'header_free_shipping_banner_yellow_banner');
     }
 }
+add_action( 'plugins_loaded', 'my_theme_plugins_loaded_is_loaded' );
 
-add_action('header_free_shipping_banner', 'header_free_shipping_banner_yellow_banner');
+
 
 //==============================================================================
 //  Continue shopping button on cart page
@@ -497,7 +477,7 @@ function variation_title_not_include_attributes( $boolean ){
     } elseif ( is_page( 'checkout' ) || is_checkout() ) {
         $boolean = true;
     }
-    
+
     return $boolean;
 }
 // add_filter( 'woocommerce_product_variation_title_include_attributes', 'variation_title_not_include_attributes', 50 );
