@@ -85,10 +85,12 @@ add_filter( 'woocommerce_upsells_order', function() { return 'asc'; } );
 if ( !function_exists( 'child_theme_configurator_css' ) ):
     function child_theme_configurator_css() {
         wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'getbowtied_icons','motion-ui','thehanger-styles','getbowtied-default-fonts' ) );
+        wp_enqueue_style( 'ab-lity', trailingslashit( get_stylesheet_directory_uri() ) . '/css/lity.css' );
         //Yoast faq accordion js file
         //Code: https://labs.freddielore.com/yoast-faq-block-collapsible-headers-accordions/
         //Guide followed: https://betterprogramming.pub/how-to-add-javascript-to-wordpress-a4fdc7618a21
         // Useful info: https://developer.wordpress.org/themes/basics/including-css-javascript/
+        wp_enqueue_script( 'ab-lity', get_stylesheet_directory_uri() . '/js/lity.js', array('jquery'), '', true );
         wp_enqueue_script( 'yoast-faq', get_stylesheet_directory_uri() . '/js/yoast-faq.js', array('jquery'), '', true );
     }
 endif;
@@ -392,11 +394,25 @@ function woocommerce_single_product_book_two_image () {
     <div class="two-image-product-images">
         <div class="first-image">
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );  ?>
-                
-            <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+
+            <a href="<?php echo $image[0]; ?>" data-lity>
+                <img src="<?php echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+            </a>
         </div>
         <div class="secound-image">
-            <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+
+            <?php 
+                $product = new WC_Product( get_the_ID() );
+                $attachment_ids = $product->get_gallery_image_ids();
+
+                if ( is_array( $attachment_ids ) && !empty($attachment_ids) ) {
+                    $first_image_url = wp_get_attachment_url( $attachment_ids[0] );
+                }
+            ?>
+            <a href="<?php echo $first_image_url; ?>" data-lity>
+                <img src="<?php echo $first_image_url; ?>" data-id="<?php echo $loop->post->ID; ?>">
+            </a>
+            
         </div>
     </div>
     <?php

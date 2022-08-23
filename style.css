@@ -763,6 +763,7 @@ body.content-layout-boxed .site-wrapper .site-content-wrapper .site-page-content
 }
 
 @media screen and (min-width:80em) {
+    .site-wrapper .site-content-wrapper .woocommerce-order,
     .site-wrapper .site-content-wrapper .site-page-content {
         padding-left: 5.25rem;
         padding-right: 5.25rem;
