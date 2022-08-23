@@ -17,8 +17,7 @@
 
 				<div class="site-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo esc_url( GBT_Opt::getOption('header_alt_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>">
-						<img class="text-logo" src="<?php echo $historien_img; ?>" alt="historienomdig_logo">
+						<img src="<?php echo esc_url( GBT_Opt::getOption('header_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" width="<?php echo esc_attr(GBT_Opt::getOption('header_logo_width')); ?>">
 					</a>
 				</div>
 

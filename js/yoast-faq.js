@@ -46,3 +46,17 @@ jQuery(document).ready(function($){
 	    jQuery("#order_review").toggleClass("ship-a-open");
 	});
 });
+
+	var sticky = document.getElementsByClassName("sticky_header_placeholder");
+
+	var offset = sticky.offsetTop();
+
+	jQuery(window).scroll(function() {
+
+	    if ( jQuery('body').scrollTop() > offset){
+	        jQuery('.sticky_header_placeholder').addClass('fixed');
+	    } else {
+	        jQuery('.sticky_header_placeholder').removeClass('fixed');
+	    } 
+
+	});

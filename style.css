@@ -1559,6 +1559,29 @@ div#wfspb-top-bar,
     font-weight: 500;
 }
 
+header.site-header.site-header-style-1.header-normal {
+    display: none;
+}
+
+.topbar {
+    display: none !important;
+}
+
+.sticky_header_placeholder {
+    position: unset !important;
+    opacity: 1 !important;
+    animation-fill-mode: unset !important;
+}
+
+.sticky_header_placeholder .topbar {
+    display: block !important;
+}
+
+.sticky_header_placeholder .fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; }
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
@@ -1632,8 +1655,10 @@ div#wfspb-top-bar,
 }
 
 @media screen and (min-width:1024px) {
-    .topbar {
-        display: block !important;
+    .sticky_header_placeholder {
+        height: unset;
+        overflow: unset;
+        visibility: visible;
     }
 
     .woocommerce-checkout-review-order.ship-a-open {
