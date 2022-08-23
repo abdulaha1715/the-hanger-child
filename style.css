@@ -106,11 +106,6 @@ ul {
     margin-top: -2px !important;
 }
 
-.site-free-shipping-banner {
-    padding: 8px 0;
-    background: #EDE5BD !important;
-}
-
 .site-free-shipping-banner p {
     text-align: center;
     margin: 0 auto;
@@ -1551,6 +1546,7 @@ div#wfspb-top-bar,
     display: block !important;
     position: unset !important;
     background: #EDE5BD !important;
+    padding: 14px 0;
 }
 
 .site-free-shipping-banner b#wfspb-current-amout,
