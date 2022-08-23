@@ -340,10 +340,6 @@ body.home .vc_column-inner .site-prefooter {
     display: block !important;
 }
 
-body.home .site-prefooter {
-    display: none;
-}
-
 /* header sticky search */
 
 .site-header-style-1 .header-tools {
