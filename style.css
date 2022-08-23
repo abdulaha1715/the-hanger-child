@@ -181,7 +181,6 @@ body.woocommerce-cart .woocommerce tr.cart-subtotal td {
 }
 
 span.shipping-title {
-    color: #000000;
     display: block;
     margin-bottom: 15px;
 }
@@ -194,10 +193,6 @@ tr.woocommerce-shipping-totals.shipping th {
 
 tr.woocommerce-shipping-totals.shipping td {
     width: 100%;
-}
-
-ul#shipping_method li {
-    color: #000;
 }
 
 ul#shipping_method li input {
@@ -243,7 +238,6 @@ body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-t
 
 span.cart-p-attributes {
     font-size: 13px;
-    color: #000000;
 }
 
 
@@ -258,7 +252,6 @@ p.cart-p-attributes span {
 /* add to cart spin */
 
 .single-product input.qty.text {
-    color: #000000;
     background: #ffffff;
     width: 125px !important;
     padding-left: 0 !important;
@@ -1000,16 +993,8 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
     border-bottom: 2px solid #A8ACAB;
 }
 
-table.shop_table.woocommerce-checkout-review-order-table td.product-name {
-    color: #000000;
-}
-
 table.shop_table.woocommerce-checkout-review-order-table p.cart-p-attributes {
     display: none;
-}
-
-table.shop_table.woocommerce-checkout-review-order-table td.product-total {
-    color: #000000;
 }
 
 body.woocommerce-cart .woocommerce .cart_totals .order-total strong,
@@ -1136,13 +1121,8 @@ ul.woocommerce-error p {
 }
 
 p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
-    color: #000000;
     margin: 20px 0 20px;
     padding-bottom: 60px !important;
-}
-
-p.d-p-bank {
-    color: #000000;
 }
 
 th.woocommerce-table__product-table.product-total,
@@ -1425,7 +1405,6 @@ p.cart-empty {
 .page_as_post_header p#breadcrumbs {
     font-size: 13px;
     font-weight: 400;
-    color: #000;
 }
 
 /* slider */
@@ -1555,10 +1534,6 @@ dl.variation dt {
     /*display: none;*/
 }
 
-tr.woocommerce-cart-form__cart-item.cart_item {
-    color: #222;
-}
-
 tr.woocommerce-cart-form__cart-item.cart_item td.product-name {
     padding-right: 20px !important;
 }
@@ -1575,12 +1550,7 @@ div#wfspb-top-bar,
 .site-free-shipping-banner div#wfspb-top-bar {
     display: block !important;
     position: unset !important;
-    color: #222 !important;
     background: #EDE5BD !important;
-}
-
-.site-free-shipping-banner #wfspb-top-bar #wfspb-main-content {
-    color: #222 !important;
 }
 
 .site-free-shipping-banner b#wfspb-current-amout,

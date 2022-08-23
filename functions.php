@@ -584,15 +584,16 @@ function ab__thehanger_custom_styles() {
         .single-product input.qty.text,
         table.shop_table.woocommerce-checkout-review-order-table td.product-name,
         table.shop_table.woocommerce-checkout-review-order-table td.product-total,
+        body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-name a,
         p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received,
-        p.d-p-bank
+        p.d-p-bank,
+        dl.variation p
         {
-            color: ' . esc_html(GBT_Opt::getOption('secondary_color')) . ';
+            color: ' . esc_html(GBT_Opt::getOption('secondary_color')) . ' !important;
         }
     ';
-        
-    wp_enqueue_style( 'getbowtied-default-fonts', get_template_directory_uri() . '/inc/fonts/default.css', false, getbowtied_theme_version(), 'all');
-    wp_add_inline_style( 'getbowtied_admin_styles', $ab__custom_styles );
+
+    wp_add_inline_style( 'chld_thm_cfg_child', $ab__custom_styles );
 
 }
-add_action( 'admin_enqueue_scripts', 'ab__thehanger_custom_styles' );
+add_action( 'wp_enqueue_scripts', 'ab__thehanger_custom_styles' );
