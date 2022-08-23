@@ -597,3 +597,154 @@ function ab__thehanger_custom_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'ab__thehanger_custom_styles' );
+
+
+remove_action( 'getbowtied_ajax_search_form', 'getbowtied_ajax_search_form', 10 );
+
+//==============================================================================
+//  Ajax search form
+//==============================================================================
+function getbowtied_ajax_search_form_ab() {
+
+    if( ( 1 == GBT_Opt::getOption('header_search_toggle') && 'style-1' == GBT_Opt::getOption('header_template') ) || ( 1 == GBT_Opt::getOption('simple_header_search_toggle') && 'style-2' == GBT_Opt::getOption('header_template') ) ) :
+
+        ob_start();
+        $notsearch = false;
+
+        if (isset($_GET['s']) && isset($_GET['post_type']) && $_GET['post_type']== 'product') {
+            $args = array(
+                's'                      => sanitize_text_field($_GET['s']),
+                'posts_per_page'         => 4,
+                'post_type'              => 'product',
+                'post_status'            => 'publish',
+                'suppress_filters'       => false,
+                'tax_query'              => array(
+                    array(
+                        'taxonomy' => 'product_visibility',
+                        'field'    => 'name',
+                        'terms'    => 'exclude-from-search',
+                        'operator' => 'NOT IN',
+                    )
+                )
+            );
+
+            if ( isset( $_GET['search_category'] ) && ($_GET['search_category']!= 'all') ) {
+                $args['tax_query'] = array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field'    => 'slug',
+                        'terms'    => sanitize_text_field($_GET['search_category'])
+                    )
+                );
+            }
+        } else {
+            $notsearch = true;
+
+            $meta_query  = WC()->query->get_meta_query();
+            $tax_query   = WC()->query->get_tax_query();
+            $tax_query[] = array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'name',
+                'terms'    => 'featured',
+                'operator' => 'IN',
+            );
+
+            $args = array(
+                'post_type'           => 'product',
+                'post_status'         => 'publish',
+                'ignore_sticky_posts' => 1,
+                'posts_per_page'      => 4,
+                'meta_query'          => $meta_query,
+                'tax_query'           => $tax_query,
+            );
+        }
+
+        $featured = get_posts($args);
+        $featured_products= '';
+        
+
+        echo '
+            <form class="header_search_form stay" role="search" method="get" action="' . esc_url( home_url( '/'  ) ) .'">
+                                            
+                <div class="header_search_input_wrapper">
+                    <div class="header_search_button_wrapper">
+                        <button class="header_search_button" type="submit"></button>
+                    </div>
+                    <input
+                        name="s"
+                        id="search"
+                        class="header_search_input" 
+                        type="search" 
+                        autocomplete="off" 
+                        value="' . get_search_query() .'"
+                        data-min-chars="3"
+                        placeholder="' . esc_html__( 'Product Search', 'woocommerce' ) . '"
+                        />
+
+                        <input type="hidden" name="post_type" value="product" />
+                    <div class="header_search_button_wrapper cross">
+                        <a class="closs-s-bar"></a>
+                    </div>
+                </div>';
+
+                if( ( 'style-1' == GBT_Opt::getOption('header_template') && '1' == GBT_Opt::getOption('header_search_by_category') ) || ( 'style-2' == GBT_Opt::getOption('header_template') && '1' == GBT_Opt::getOption('simple_header_search_by_category') ) ) :
+
+                    $categories= get_terms( array( 'taxonomy' => 'product_cat','hide_empty' => 0,  'parent' => 0) );
+
+                    if( $categories ) {         
+
+                        echo '<div class="header_search_select_wrapper">
+                                <select name="search_category" id="header_search_category" class="header_search_select">
+                                    <option value="all" selected>' . esc_html__( 'Select Category', 'the-hanger' ) . '</option>';
+
+                                        foreach ($categories as $cat) {
+                                            printf('<option %s value="%s">%s</option>', isset($_GET['search_category']) && $_GET['search_category']== $cat->slug? 'selected' : '', $cat->slug, $cat->name);
+                                        }
+
+                        echo '</select>
+                        </div>';
+                    }
+
+                endif;
+
+            echo '
+
+                <div class="header_search_ajax_results_wrapper">
+                    <div class="header_search_ajax_results">';
+                        if( $featured ) {
+                            echo '<div class="ajax_results_wrapper">';
+                                if($notsearch=== true) {
+                                    echo '<span class="product-search-heading">' . esc_html__("Featured products", "woocommerce") . '</span>';
+                                }
+                                else {
+                                    echo '<span class="product-search-heading">' . esc_html__("Search suggestions", "the-hanger") . '</span>';
+                                }
+                            if (!empty($featured) && is_array($featured)) {
+                                foreach ($featured as $post) {
+                                    $_product = wc_get_product( $post );
+                                    ?>
+                                    <div class="product-search-result">
+                                        <a href="<?php echo esc_url($_product->get_permalink()); ?>">
+                                            <div class="product-search-img">
+                                                <?php echo wp_get_attachment_image($_product->get_image_id(), 'thumbnail'); ?>
+                                            </div>
+                                            <div class="product-search-info">
+                                                <span class="product-search-title"><?php echo esc_html($_product->get_name());?></span><br/>
+                                                <?php echo wc_price($_product->get_price()); ?>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            echo '</div>';
+                        }
+                    echo '</div>
+                </div>
+            </form>';
+        $output = ob_end_flush();
+
+    endif;
+}
+add_action( 'getbowtied_ajax_search_form', 'getbowtied_ajax_search_form_ab');

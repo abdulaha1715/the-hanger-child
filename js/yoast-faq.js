@@ -34,6 +34,13 @@ jQuery(document).ready(function($){
 	jQuery(".header-search-icon-below").click(function(){
 		jQuery(".header-search-icon-below").toggleClass("close");
 		jQuery(".header-search-below").toggleClass("active-search");
+		jQuery(".site-header-style-1").toggleClass("active-search");
+	});
+
+	// search toogle class
+	jQuery(".closs-s-bar").click(function(){
+		jQuery(".header-search-below").removeClass("active-search");
+		jQuery(".site-header-style-1").removeClass("active-search");
 	});
 
 	// order comment toogle class
