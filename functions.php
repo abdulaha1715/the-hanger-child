@@ -533,3 +533,66 @@ function ab_fs_get_settings() {
 
     return apply_filters( 'wc_settings_tab_demo_settings', $settings );
 }
+
+/**
+ * font-family
+ */
+function ab__thehanger_custom_styles() {
+
+    $ab__custom_styles = '
+
+        .site-free-shipping-banner p,
+        span.shipping-title,
+        ul#shipping_method li .shipping_pickup_cart,
+        span.cart-p-attributes,
+        .checkout-right-shipping h3#delivery-method,
+        .checkout-right-payment h3#payment,
+        .woocommerce-shipping-destination,
+        .shipping-calculator-button,
+        ul#shipping_method li label,
+        .shipmondo-modal-wrapper,
+        .page_as_post_header p#breadcrumbs,
+        .site-free-shipping-banner #wfspb-top-bar #wfspb-main-content,
+        .schema-faq-question,
+        tr.woocommerce-cart-form__cart-item.cart_item
+        {
+            font-family: ' . esc_html(GBT_Opt::getOption('secondary_font')['font-family']) . ', sans-serif;
+        }
+
+        .wp-block-verse pre
+        {
+            font-family: ' . esc_html(GBT_Opt::getOption('main_font')['font-family']) . ', sans-serif;
+        }
+
+        .wp-block-latest-comments .wp-block-latest-comments__comment-link
+        {
+            font-size: ' . esc_html(GBT_Opt::getOption('font_size')) . 'px;
+        }
+
+        .edit-post-visual-editor .block-editor-block-list__block h1
+        {
+            font-size: ' . 2.5 * esc_html(GBT_Opt::getOption('font_size')) . 'px;
+        }
+        
+        .page_as_post_header p#breadcrumbs,
+        tr.woocommerce-cart-form__cart-item.cart_item,
+        .site-free-shipping-banner div#wfspb-top-bar,
+        .site-free-shipping-banner #wfspb-top-bar #wfspb-main-content,
+        span.shipping-title,
+        ul#shipping_method li,
+        span.cart-p-attributes,
+        .single-product input.qty.text,
+        table.shop_table.woocommerce-checkout-review-order-table td.product-name,
+        table.shop_table.woocommerce-checkout-review-order-table td.product-total,
+        p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received,
+        p.d-p-bank
+        {
+            color: ' . esc_html(GBT_Opt::getOption('secondary_color')) . ';
+        }
+    ';
+        
+    wp_enqueue_style( 'getbowtied-default-fonts', get_template_directory_uri() . '/inc/fonts/default.css', false, getbowtied_theme_version(), 'all');
+    wp_add_inline_style( 'getbowtied_admin_styles', $ab__custom_styles );
+
+}
+add_action( 'admin_enqueue_scripts', 'ab__thehanger_custom_styles' );

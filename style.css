@@ -114,7 +114,6 @@ ul {
 .site-free-shipping-banner p {
     text-align: center;
     margin: 0 auto;
-    font-family: Comfortaa, sans-serif;
     font-size: 14px;
 }
 
@@ -183,7 +182,6 @@ body.woocommerce-cart .woocommerce tr.cart-subtotal td {
 
 span.shipping-title {
     color: #000000;
-    font-family: Comfortaa, sans-serif;
     display: block;
     margin-bottom: 15px;
 }
@@ -219,7 +217,6 @@ ul#shipping_method li label {
 ul#shipping_method li .shipping_pickup_cart {
     margin-left: 18px;
     margin-top: -18px;
-    font-family: Comfortaa, Sans-serif;
 }
 
 .awdr_cart_strikeout_line {
@@ -246,7 +243,6 @@ body.woocommerce-cart .cart-collaterals .cart_totals table.shop_table tr.order-t
 
 span.cart-p-attributes {
     font-size: 13px;
-    font-family: Comfortaa, sans-serif;
     color: #000000;
 }
 
@@ -1127,7 +1123,6 @@ ul.woocommerce-error p {
 .checkout-right-shipping h3#delivery-method,
 .checkout-right-payment h3#payment {
     font-size: 19px;
-    font-family: Comfortaa, Sans-serif;
 }
 
 /* order page */
@@ -1169,11 +1164,6 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 
 .woocommerce-table--order-details .includes_tax .woocommerce-Price-amount.amount {
     padding: 0 5px;
-}
-
-.woocommerce-shipping-destination,
-.shipping-calculator-button {
-    font-family: Comfortaa, Sans-serif;
 }
 
 tr.cart-subtotal .tax_label {
@@ -1303,7 +1293,6 @@ ul#shipping_method {
 ul#shipping_method li label {
     display: flex !important;
     justify-content: space-between;
-    font-family: Comfortaa, Sans-serif;
 }
 
 ul#shipping_method li {
@@ -1318,10 +1307,6 @@ ul#shipping_method li:last-child {
 
 ul#shipping_method li small.tax_label {
     display: none;
-}
-
-.shipmondo-modal-wrapper {
-    font-family: Comfortaa, Sans-serif;
 }
 
 .shipmondo_stores {
@@ -1441,7 +1426,6 @@ p.cart-empty {
     font-size: 13px;
     font-weight: 400;
     color: #000;
-    font-family: Comfortaa, Sans-serif;
 }
 
 /* slider */
@@ -1573,7 +1557,6 @@ dl.variation dt {
 
 tr.woocommerce-cart-form__cart-item.cart_item {
     color: #222;
-    font-family: Comfortaa, Sans-serif;
 }
 
 tr.woocommerce-cart-form__cart-item.cart_item td.product-name {
@@ -1598,7 +1581,6 @@ div#wfspb-top-bar,
 
 .site-free-shipping-banner #wfspb-top-bar #wfspb-main-content {
     color: #222 !important;
-    font-family: Comfortaa, Sans-serif;
 }
 
 .site-free-shipping-banner b#wfspb-current-amout,
