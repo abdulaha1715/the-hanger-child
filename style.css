@@ -369,6 +369,7 @@ body.home .vc_column-inner .site-prefooter {
 
 .single-product button.single_add_to_cart_button.button.alt {
     padding: 0 2.5rem 0 2rem !important;
+    border-radius: 0 10px 10px 0 !important;
 }
 
 tr.woocommerce-cart-form__cart-item.cart_item .awdr_cart_strikeout_line ins {
@@ -1312,8 +1313,9 @@ input#shipmondo_find_shop_btn_0 {
 
 /* unchange */
 .single-product .product .cart .quantity input {
+    margin-left: -15px;
     background: #fff !important;
-    border-radius: 0 !important;
+    border-radius: 10px 0 0 10px !important;
 }
 
 body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-quantity .quantity input,
@@ -1364,7 +1366,7 @@ p.cart-empty {
 }
 
 .page_as_post_header p#breadcrumbs {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
 }
 
@@ -1734,6 +1736,10 @@ form.header_search_form.stay {
 }
 
 @media screen and (max-width:1023px) {
+
+    body.woocommerce-cart .cart-collaterals ul#shipping_method {
+        width: 145%;
+    }
     .woocommerce-cart-form tr.cart_item td.product-remove {
         display: none;
     }

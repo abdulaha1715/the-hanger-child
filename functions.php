@@ -392,7 +392,7 @@ function woocommerce_single_product_book_two_image () {
     <div class="two-image-product-images">
         <div class="first-image">
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );  ?>
-                                        
+                
             <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
         </div>
         <div class="secound-image">
