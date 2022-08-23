@@ -34,15 +34,7 @@
 
 								<div class="header-search">
 
-									<?php
-										if ( GETBOWTIED_WOOCOMMERCE_IS_ACTIVE ) {
-											do_action('getbowtied_ajax_search_form');
-										} else {
-										 	if( ( 1 == GBT_Opt::getOption('header_search_toggle') && 'style-1' == GBT_Opt::getOption('header_template') ) ) {
-												get_search_form();
-											}
-										}
-									?>
+									
 
 								</div>
 

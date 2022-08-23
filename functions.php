@@ -713,13 +713,15 @@ function getbowtied_ajax_search_form_ab() {
                 <div class="header_search_ajax_results_wrapper">
                     <div class="header_search_ajax_results">';
                         if( $featured ) {
-                            echo '<div class="ajax_results_wrapper">';
-                                if($notsearch=== true) {
-                                    echo '<span class="product-search-heading">' . esc_html__("Featured products", "woocommerce") . '</span>';
-                                }
-                                else {
-                                    echo '<span class="product-search-heading">' . esc_html__("Search suggestions", "the-hanger") . '</span>';
-                                }
+
+                            if($notsearch=== true) {
+                                echo '<span class="product-search-heading">' . esc_html__("Featured products", "woocommerce") . '</span>';
+                            } else {
+                                echo '<span class="product-search-heading">' . esc_html__("Search suggestions", "the-hanger") . '</span>';
+                            }
+
+                            echo 
+                            '<div class="ajax_results_wrapper">';
                             if (!empty($featured) && is_array($featured)) {
                                 foreach ($featured as $post) {
                                     $_product = wc_get_product( $post );
