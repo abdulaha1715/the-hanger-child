@@ -39,7 +39,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 			$qty_display = esc_html( $qty );
 		}
 
-		echo apply_filters( 'woocommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '%s&nbsp;&times;', $qty_display ) . '</strong>', $item ); 
+		echo apply_filters( 'woocommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '%s&nbsp;&times;&nbsp;', $qty_display ) . '</strong>', $item ); 
 
 		echo wp_kses_post( apply_filters( 'woocommerce_order_item_name', $product_permalink ? sprintf( '<a href="%s">%s</a>', $product_permalink, $item->get_name() ) : $item->get_name(), $item, $is_visible ) );
 		

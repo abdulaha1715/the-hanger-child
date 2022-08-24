@@ -603,7 +603,11 @@ function ab__thehanger_custom_styles() {
         body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-name a,
         p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received,
         p.d-p-bank,
-        dl.variation p
+        dl.variation p,
+        td.woocommerce-table__product-name.product-name a,
+        .woocommerce-table--order-details ul.wc-item-meta li,
+        table.woocommerce-table.woocommerce-table--order-details.shop_table.order_details td,
+        .woocommerce-table--order-details span.woocommerce-Price-amount.amount
         {
             color: ' . esc_html(GBT_Opt::getOption('secondary_color')) . ' !important;
         }
