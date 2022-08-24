@@ -724,11 +724,11 @@ add_action( 'getbowtied_ajax_search_form', 'getbowtied_ajax_search_form_ab');
 /**
  * Footer logo 
  */
-// Kirki::add_field( 'thehanger', array(
-//     'type'        => 'image',
-//     'settings'    => 'footer_logo',
-//     'label'       => esc_html__( 'Footer Logo', 'the-hanger' ),
-//     'section'     => 'footer',
-//     'default'     => get_template_directory_uri() . '/images/beibi-logo.png',
-//     'priority'    => 10,
-// ) );
+Kirki::add_field( 'thehanger', array(
+    'type'        => 'image',
+    'settings'    => 'footer_logo',
+    'label'       => esc_html__( 'Footer Logo', 'the-hanger' ),
+    'section'     => 'footer',
+    'default'     => get_template_directory_uri() . '/images/beibi-logo.png',
+    'priority'    => 10,
+) );
