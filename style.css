@@ -881,7 +881,7 @@ body.woocommerce-checkout .woocommerce .woocommerce-shipping-fields .form-row-fi
 
 .woocommerce-billing-fields label,
 .woocommerce-shipping-fields .shipping_address label {
-    width: 32%;
+    width: 25%;
     float: left;
     line-height: 28px;
     padding-top: 10px;
@@ -917,7 +917,7 @@ input#shipping_postcode,
 input#shipping_city,
 input#shipping_email,
 input#shipping_phone {
-    width: 65%;
+    width: 72%;
     margin: 0 !important;
     background: #fbfcfc;
     border-radius: 5px;
@@ -941,7 +941,7 @@ input#shipping_postcode:focus,
 input#shipping_city:focus,
 input#shipping_email:focus,
 input#shipping_phone:focus {
-    background: #d5e1e1;
+    /*background: #d5e1e1;*/
 }
 
 p.form-row.form-row-wide.mailchimp-newsletter {
@@ -951,6 +951,13 @@ p.form-row.form-row-wide.mailchimp-newsletter {
 label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
     cursor: pointer;
     padding: 20px 0 0;
+}
+
+#order_comments  {
+  margin: 0 !important;
+  background: #fbfcfc;
+  border-radius: 5px;
+  border: 1px solid #5c6e79;
 }
 
 .woocommerce-shipping-fields {
@@ -1036,7 +1043,7 @@ p#order_comments_field label:before {
 p#order_comments_field label:after {
     transform: rotate(45deg) !important;
 }
-
+/*
 p#order_comments_field.open label:before {
     right: -25px;
     transform: rotate(45deg) !important;
@@ -1044,7 +1051,7 @@ p#order_comments_field.open label:before {
 
 p#order_comments_field.open label:after {
     transform: rotate(140deg) !important;
-}
+}*/
 
 span.optional {
     display: none;
