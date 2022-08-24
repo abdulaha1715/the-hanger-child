@@ -1635,6 +1635,29 @@ form.header_search_form.stay {
     font-size: 85%;
 }
 
+ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details li {
+    text-transform: capitalize !important;
+}
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(1) {
+    border: none;
+}
+
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(1) th,
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(1) td {
+    padding-bottom: 10px;
+}
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(2) {
+    display: none;
+}
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(3) th,
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(3) td {
+    padding-top: 0;
+}
+
 
 @media screen and (max-width:1334px) {
 
