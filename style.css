@@ -735,6 +735,7 @@ li.header-search-icon-below.close a span {
 
 /* page template padding-left and padding-right */
 
+
 .site-wrapper .site-content-wrapper .site-page-content {
     padding: 1.6875rem 1.25rem;
 }
@@ -1662,6 +1663,20 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
     padding-top: 0;
 }
 
+.site-footer .footer-style-1 .footer-text {
+    display: flex;
+    align-items: baseline;
+}
+
+.site-footer .footer-style-1 .footer-text .site-logo {
+    width: 17%;
+    padding: 0;
+    margin-right: 30px;
+}
+
+.site-footer .footer-content .row.align-top {
+    align-items: baseline;
+}
 
 @media screen and (max-width:1334px) {
 
@@ -1700,6 +1715,11 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 @media screen and (max-width:1279px) {
+
+    .site-wrapper .site-content-wrapper .woocommerce-order {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
     body.woocommerce-cart .woocommerce .woocommerce-cart-form tr:not(.cart_item) td.actions .coupon {
         width: 60% !important;
@@ -1778,6 +1798,27 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 @media screen and (max-width:1023px) {
+
+    ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .site-wrapper .site-content-wrapper .woocommerce-order {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .site-footer .footer-style-1 .footer-text {
+        display: block;
+        text-align: center;
+    }
+
+    .site-footer .footer-style-1 .footer-text .site-logo {
+        width: 100%;
+        padding: 1rem 0;
+        margin-right: 0;
+    }
 
     body.woocommerce-cart .cart-collaterals ul#shipping_method {
         width: 145%;
@@ -1861,6 +1902,11 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 @media screen and (max-width:575px) {
+
+
+    ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+        display: block;
+    }
 
     .single-product input.qty.text {
         width: 100px !important;
