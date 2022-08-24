@@ -53,8 +53,14 @@
 							<?php endif; ?>
 
 							<div class="footer-text">
-								<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( GBT_Opt::getOption('header_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" width="<?php echo esc_attr(GBT_Opt::getOption('header_logo_width')); ?>"></a></div>
-								<?php echo GBT_Opt::getOption('footer_text') ?>
+								<div class="site-logo">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/images/beibi-logo.png' ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" width="<?php echo esc_attr(GBT_Opt::getOption('header_logo_width')); ?>">
+									</a>
+								</div>
+								<div class="footer-copy-text">
+									<?php echo GBT_Opt::getOption('footer_text') ?>
+								</div>
 							</div>
 
 						</div>

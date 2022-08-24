@@ -1665,7 +1665,6 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 
 .site-footer .footer-style-1 .footer-text {
     display: flex;
-    align-items: baseline;
 }
 
 .site-footer .footer-style-1 .footer-text .site-logo {
@@ -1676,6 +1675,10 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 
 .site-footer .footer-content .row.align-top {
     align-items: baseline;
+}
+
+.site-footer .footer-content .footer-copy-text {
+    padding-top: 8px !important;
 }
 
 @media screen and (max-width:1334px) {
