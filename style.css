@@ -1313,6 +1313,10 @@ input#shipmondo_find_shop_btn_0 {
 }
 
 /* unchange */
+.single-product .product .cart .add_to_cart_wrapper {
+    margin-left: 15px;
+}
+
 .single-product .product .cart .quantity input {
     margin-left: -15px;
     background: #fff !important;
@@ -1857,6 +1861,16 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 @media screen and (max-width:575px) {
+
+    .single-product input.qty.text {
+        width: 100px !important;
+        padding-right: 30px !important;
+    }
+
+    .single-product button.single_add_to_cart_button.button.alt {
+        /*width: calc(100% - 20px);*/
+    }
+
     body.single-product.product_cat_two-image-product .two-image-product-images {
         display: block;
     }
