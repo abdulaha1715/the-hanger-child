@@ -1688,6 +1688,10 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
     padding-top: 8px !important;
 }
 
+.gbt-sticky {
+    left: 33% !important;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .site-wrapper .site-content-wrapper .site-page-content {
@@ -1718,6 +1722,7 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 @media screen and (min-width:1280px) {
+
     .site-header-style-1 .header-search-below.active-search {
         padding-left: 5.25rem !important;
         padding-right: 5.25rem !important;
