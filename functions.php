@@ -114,9 +114,9 @@ function wpb_custom_billing_fields( $fields = array() ) {
 add_filter( 'woocommerce_checkout_fields', 'beibi_email_first' );
 
 function beibi_email_first( $checkout_fields ) {
-	$checkout_fields['billing']['billing_email']['priority'] = 4;
-    $checkout_fields['billing']['billing_phone']['priority'] = 5;
-    $checkout_fields['billing']['billing_city']['priority'] = 91;
+    $checkout_fields['billing']['billing_email']['priority']   = 4;
+    $checkout_fields['billing']['billing_phone']['priority']   = 5;
+    $checkout_fields['billing']['billing_city']['priority']    = 91;
     $checkout_fields['billing']['billing_country']['priority'] = 92;
 	return $checkout_fields;
 }
@@ -128,8 +128,8 @@ add_filter( 'woocommerce_checkout_fields' , 'beibi_checkout_fields_styling', 999
 
 function beibi_checkout_fields_styling( $f ) {
 
-	$f['billing']['billing_email']['class'][0] = 'form-row-first';
-	$f['billing']['billing_phone']['class'][0] = 'form-row-last';
+    $f['billing']['billing_email']['class'][0]    = 'form-row-first';
+    $f['billing']['billing_phone']['class'][0]    = 'form-row-last';
     $f['billing']['billing_postcode']['class'][0] = 'form-row-first';
 	//$f['billing']['billing_city']['class'][0] = 'form-row-last';
 	
@@ -146,9 +146,9 @@ function beibi_labels_placeholders( $f ) {
 
 	// first name can be changed with woocommerce_default_address_fields as well
     // labels doesn't change as it's said they should... 
-	$f['billing']['billing_address_1']['label'] = 'Adresse';
-    $f['order']['order_comments']['label'] = 'Tilf&oslash;j bem&aelig;rkninger til ordren.';
-	$f['order']['order_comments']['placeholder'] = 'Evt bem&aelig;rkning til din ordre (til Beibi, ikke til fragtselskabet)';
+    $f['billing']['billing_address_1']['label']  = 'Adresse';
+    $f['order']['order_comments']['label']       = 'Tilf&oslash;j bem&aelig;rkninger til ordren.';
+    $f['order']['order_comments']['placeholder'] = 'Evt bem&aelig;rkning til din ordre (til Beibi, ikke til fragtselskabet)';
 	
 	return $f;
 
