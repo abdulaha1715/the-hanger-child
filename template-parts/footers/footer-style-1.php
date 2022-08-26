@@ -57,13 +57,17 @@
 								<?php if ( ! empty( GBT_Opt::getOption('footer_logo') ) ) : ?>
 
 									<div class="site-logo">
-										<img src="<?php echo esc_url( GBT_Opt::getOption('footer_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="beibi-logo">
+										<a href="<?php echo esc_url( GBT_Opt::getOption('footer_logo_url') ); ?>" rel="home">
+											<img src="<?php echo esc_url( GBT_Opt::getOption('footer_logo') ); ?>" title="<?php bloginfo('name'); ?>" alt="beibi-logo">
+										</a>
 									</div>
 
 								<?php else : ?>
 
 									<div class="site-logo">
-										<img src="<?php echo get_stylesheet_directory_uri() . '/images/beibi-logo.png' ?>" title="<?php bloginfo('name'); ?>" alt="beibi-logo" >
+										<a href="<?php echo esc_url( GBT_Opt::getOption('footer_logo_url') ); ?>" rel="home">
+											<img src="<?php echo get_stylesheet_directory_uri() . '/images/beibi-logo.png' ?>" title="<?php bloginfo('name'); ?>" alt="beibi-logo" >
+										</a>
 									</div>
 									
 

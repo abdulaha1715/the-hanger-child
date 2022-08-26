@@ -725,14 +725,27 @@ add_action( 'getbowtied_ajax_search_form', 'getbowtied_ajax_search_form_ab');
  * Footer logo 
  */
 
+
+// Kirki.
+require_once( get_stylesheet_directory() . '/inc/kirki/kirki.php');
+
 if ( class_exists( 'Kirki' ) ) {
     Kirki::add_field( 'thehanger', array(
         'type'        => 'image',
         'settings'    => 'footer_logo',
-        'label'       => esc_html__( 'Footer Logo', 'the-hanger' ),
+        'label'       => esc_html__( 'Footer Main Site Logo', 'the-hanger' ),
         'section'     => 'footer',
         'default'     => get_template_directory_uri() . '/images/beibi-logo.png',
         'priority'    => 10,
+    ) );
+
+    Kirki::add_field( 'thehanger', array(
+        'type'     => 'url',
+        'settings' => 'footer_logo_url',
+        'label'    => esc_html__( 'Main Site Url', 'the-hanger' ),
+        'section'  => 'footer',
+        'default'  => 'https://beibi.dk/',
+        'priority' => 10,
     ) );
 }
 
