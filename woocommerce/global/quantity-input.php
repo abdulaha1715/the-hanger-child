@@ -44,10 +44,16 @@ if ( $max_value && $min_value === $max_value ) {
 			placeholder="<?php echo esc_attr( $placeholder ); ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>" />
 
-		<?php if ( !is_cart() ) : ?>
+		<?php 
+		global $product; 
+		if ( ! is_cart() ) : ?>
 		<div class="quantity-button">
 			<button type='button' title='Decrease quantity' class='minus qty' onclick='wqb_action(0,-1)'></button>
 			<button type='button' title='Increase quantity' class='plus qty' onclick='wqb_action(0,1)'></button>
+		</div>
+		<div class="quantity-nav">
+			<div class="quantity-button quantity-up"></div>
+			<div class="quantity-button quantity-down"></div>
 		</div>
 		<?php 
 		endif;
