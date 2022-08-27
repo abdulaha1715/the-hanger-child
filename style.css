@@ -1463,8 +1463,9 @@ p.cart-empty {
 }
 
 .page_as_post_header p#breadcrumbs {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
+    text-transform: lowercase;
 }
 
 /* slider */
@@ -1827,6 +1828,10 @@ table.shop_table.woocommerce-checkout-review-order-table tr.cart_item {
 
 .header-search-below .header_search_form .header_search_ajax_results_wrapper .product-search-img {
     display: block !important;
+}
+
+body:not(.archive):not(.blog).page-without-title .site-wrapper .site-content-wrapper .site-content {
+    padding: 3.0375rem 2.25rem;
 }
 
 @media screen and (max-width:1334px) {
