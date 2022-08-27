@@ -262,6 +262,7 @@ body.woocommerce-cart .woocommerce tr.cart-subtotal td {
 span.shipping-title {
     display: block;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 tr.woocommerce-shipping-totals.shipping {}
@@ -1376,7 +1377,6 @@ input#shipmondo_zipcode_field_0 {
 
 input#shipmondo_find_shop_btn_0 {
     font-size: 12px;
-    background: #5C6E7A !important;
     margin: 0 !important;
     padding: 14px 12px;
     border-radius: 5px !important;
@@ -1872,7 +1872,10 @@ body.woocommerce-checkout .woocommerce table.woocommerce-checkout-review-order-t
     border-color: rgba(119, 119, 119, 0.15);
 }
 
-
+.selected_shop_context, .shipmondo_zipcode_error_text, .shipping_company_required {
+    font-style: normal !important;
+    font-weight: 500;
+}
 
 @media screen and (max-width:1334px) {
 

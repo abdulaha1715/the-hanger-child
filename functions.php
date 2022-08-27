@@ -346,7 +346,7 @@ add_action( 'checkout_right_payment', 'woocommerce_checkout_payment' );
  * Shipment title
  */
 function custom_shipping_package_name( $name ) {
-    return 'Forsendelsesmetode';
+    return 'Leveringsmetode';
 }
 add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
 
