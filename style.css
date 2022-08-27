@@ -1877,6 +1877,10 @@ body.woocommerce-checkout .woocommerce table.woocommerce-checkout-review-order-t
     font-weight: 500;
 }
 
+.shipmondo-service-point-name, .shipmondo-shop-name {
+    font-weight: 500 !important;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .cart_totals .woocommerce-Price-amount.amount {
