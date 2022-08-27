@@ -1450,6 +1450,7 @@ body.woocommerce-cart .woocommerce .woocommerce-cart-form tr.cart_item .product-
 
 .header-search-below .header_search_form .header_search_button_wrapper .header_search_button::after {
     content: "\e90a" !important;
+    font-size: 21px;
     font-family: 'the-hanger' !important;
 }
 
@@ -1671,7 +1672,7 @@ form.header_search_form.stay {
     position: absolute;
     content: "";
     width: 1px;
-    height: 25px;
+    height: 21px;
     background: #222;
     top: 5px;
 }
@@ -1773,6 +1774,7 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 
 .gbt-sticky {
     left: 33% !important;
+    padding-bottom: 15px;
 }
 
 .quantity-nav,
@@ -1821,6 +1823,10 @@ table.shop_table.woocommerce-checkout-review-order-table tr.cart_item {
     border-color: rgba(119,119,119,0.15);
     border-left: 0;
     border-right: 0;
+}
+
+.header-search-below .header_search_form .header_search_ajax_results_wrapper .product-search-img {
+    display: block !important;
 }
 
 @media screen and (max-width:1334px) {
