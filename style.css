@@ -1877,6 +1877,24 @@ body.woocommerce-checkout .woocommerce table.woocommerce-checkout-review-order-t
     font-weight: 500 !important;
 }
 
+p.form-row.form-row-wide.mailchimp-newsletter {
+    display: flex;
+    align-items: baseline;
+}
+
+input#mailchimp_woocommerce_newsletter {
+    margin-right: 2%;
+}
+
+div#mailchimp-gdpr-fields label {
+    width: 92%;
+    float: right;
+}
+
+p.form-row.form-row-wide.mailchimp-newsletter label {
+    width: 92%;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .cart_totals .woocommerce-Price-amount.amount {
