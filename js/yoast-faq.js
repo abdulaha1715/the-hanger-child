@@ -86,15 +86,15 @@
 		});
 
 		// scroll to top and menu fixed
-		$(window).scroll(function() {    
-		    var scroll = $(window).scrollTop();
+		// $(window).scroll(function() {    
+		//     var scroll = $(window).scrollTop();
 
-		    if ( scroll >= 115 ) {
-		        $(".sticky_header_placeholder").addClass("fixed");
-		    } else {
-		        $(".sticky_header_placeholder").removeClass("fixed");
-		    }
-		});
+		//     if ( scroll >= 115 ) {
+		//         $(".sticky_header_placeholder").addClass("fixed");
+		//     } else {
+		//         $(".sticky_header_placeholder").removeClass("fixed");
+		//     }
+		// });
 
 		$(document).on('click', '[data-lightbox]', lity);
 	});
