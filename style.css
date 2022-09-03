@@ -1050,10 +1050,13 @@ table.shop_table.woocommerce-checkout-review-order-table p.cart-p-attributes {
     display: none;
 }
 
-body.woocommerce-cart .woocommerce .cart_totals .order-total strong,
-tr.order-total th {
-    font-size: 21px !important;
-    font-weight: 500 !important;
+body.woocommerce-cart .woocommerce .cart_totals .order-total strong, tr.order-total th {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+
+body.woocommerce-checkout .woocommerce table.woocommerce-checkout-review-order-table tr.order-total td {
+    font-size: 24px;
 }
 
 .woocommerce-cart .site-page-content {
@@ -1582,10 +1585,6 @@ dl.variation p {
     margin: 0 !important;
 }
 
-dl.variation dt {
-    text-transform: capitalize;
-}
-
 .woocommerce-checkout-review-order dl.variation {
     /*display: none;*/
 }
@@ -1806,6 +1805,7 @@ tr.cart_item.bundled_table_item td {
 
 .bundled_table_item .bundled_table_item_indent {
     padding-left: 22px !important;
+    font-size: 13px;
 }
 
 table.shop_table.woocommerce-checkout-review-order-table tr.cart_item {
