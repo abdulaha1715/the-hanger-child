@@ -1925,6 +1925,14 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
     box-shadow: none !important;
 }
 
+tr.order-total {
+    border-top: 1px solid rgba(119,119,119,0.15) !important;
+}
+
+tr.woocommerce-shipping-totals.shipping {
+    border: none;
+}
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .cart_totals .woocommerce-Price-amount.amount {
