@@ -1868,12 +1868,15 @@ body.woocommerce-checkout .woocommerce table.woocommerce-checkout-review-order-t
     border-color: rgba(119, 119, 119, 0.15);
 }
 
-.selected_shop_context, .shipmondo_zipcode_error_text, .shipping_company_required {
+.selected_shop_context,
+.shipmondo_zipcode_error_text,
+.shipping_company_required {
     font-style: normal !important;
     font-weight: 500;
 }
 
-.shipmondo-service-point-name, .shipmondo-shop-name {
+.shipmondo-service-point-name,
+.shipmondo-shop-name {
     font-weight: 500 !important;
 }
 
@@ -1893,6 +1896,33 @@ div#mailchimp-gdpr-fields label {
 
 p.form-row.form-row-wide.mailchimp-newsletter label {
     width: 92%;
+}
+
+.site-header-style-1 .navigation-foundation>ul>li>a>span:before {
+    background-color: #fff !important;
+}
+
+.header_search_ajax_results_wrapper:before,
+.header_search_ajax_results_wrapper:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 1px);
+    background: #fff;
+    top: 1px;
+    z-index: -2;
+}
+
+.header_search_ajax_results_wrapper:before {
+    right: 100%;
+}
+
+.header_search_ajax_results_wrapper:after {
+    left: 100%;
+}
+
+.header-search-below .header_search_form .header_search_ajax_results_wrapper .header_search_ajax_results {
+    box-shadow: none !important;
 }
 
 @media screen and (max-width:1334px) {
@@ -1944,7 +1974,7 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
 }
 
 @media screen and (max-width:1279px) {
-    
+
 
     body.woocommerce-cart .cart-collaterals ul#shipping_method {
         /*width: 150%;*/
@@ -2059,7 +2089,7 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
         padding: 14px 12px !important;
     }
 
-    .woocommerce-cart .cart-collaterals:after ,
+    .woocommerce-cart .cart-collaterals:after,
     .woocommerce-checkout-review-order:after {
         content: none !important;
     }
@@ -2272,6 +2302,4 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
 }
 
 
-@media screen and (max-width:410px) {
-
-}
+@media screen and (max-width:410px) {}
