@@ -941,7 +941,7 @@ form.checkout.woocommerce-checkout {
 }
 
 .form-row.place-order {
-    padding-bottom: 70px;
+    padding-bottom: 220px;
 }
 
 .woocommerce-checkout header.entry-header {
@@ -1937,7 +1937,9 @@ tr.woocommerce-shipping-totals.shipping {
     padding-left: 20px;
 }*/
 
-
+tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
+    padding-top: 16px !important;
+}
 
 
 @media screen and (max-width:1334px) {
