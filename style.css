@@ -2140,7 +2140,7 @@ tr.woocommerce-shipping-totals.shipping {
 
     .woocommerce-cart-form tr.cart_item td.product-remove.small-screen-p-remove {
         display: block;
-        right: 15px !important;
+        right: 5% !important;
     }
 
     td.product-price {
