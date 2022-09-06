@@ -1933,6 +1933,13 @@ tr.woocommerce-shipping-totals.shipping {
     border: none;
 }
 
+/*section.woocommerce-order-details ul.wc-item-meta {
+    padding-left: 20px;
+}*/
+
+
+
+
 @media screen and (max-width:1334px) {
 
     .woocommerce-cart .cart_totals .woocommerce-Price-amount.amount {
