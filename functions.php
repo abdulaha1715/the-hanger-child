@@ -684,9 +684,9 @@ function getbowtied_ajax_search_form_ab() {
                         if( $featured ) {
 
                             if($notsearch=== true) {
-                                echo '<span class="product-search-heading">' . esc_html__("Featured products", "woocommerce") . '</span>';
+                                echo '<span class="product-search-heading">' . esc_html__("Udvalgte produkter", "woocommerce") . '</span>';
                             } else {
-                                echo '<span class="product-search-heading">' . esc_html__("Search suggestions", "the-hanger") . '</span>';
+                                echo '<span class="product-search-heading">' . esc_html__("Søgeresultater", "the-hanger") . '</span>';
                             }
 
                             echo 
