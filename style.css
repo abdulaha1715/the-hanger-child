@@ -2075,12 +2075,12 @@ tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
         background: #F2F6F5;
         height: 630px;
         width: 100%;
-        bottom: -582px;
+        bottom: -480px;
         left: 0;
     }
 
     .woocommerce-checkout-review-order.ship-a-open:after {
-        height: calc(100% + 582px);
+        height: calc(100% + 480px);
     }
 
     .home .slider-content-wrapper,
