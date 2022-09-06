@@ -42,6 +42,15 @@ defined( 'ABSPATH' ) || exit;
 			<h3 class="thankyou-h"><?php esc_html_e( 'Tak for din ordre', 'woocommerce' ); ?></h3>
 
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Tusind tak for din ordre, der nu er gået igennem. Vi håber, du nød din shoppeoplevelse på Beibi', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php 
+
+			// Get the WC_Order object from the Order ID
+// $order = wc_get_order( $order_id );
+
+// Output the shipping method(s) formatted method title(s)
+// echo $order->get_shipping_method();
+// $order->get_items( 'shipping' );
+?>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 

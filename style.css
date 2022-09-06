@@ -941,7 +941,7 @@ form.checkout.woocommerce-checkout {
 }
 
 .form-row.place-order {
-    padding-bottom: 220px;
+    padding-bottom: 270px;
 }
 
 .woocommerce-checkout header.entry-header {
@@ -1050,7 +1050,8 @@ table.shop_table.woocommerce-checkout-review-order-table p.cart-p-attributes {
     display: none;
 }
 
-body.woocommerce-cart .woocommerce .cart_totals .order-total strong, tr.order-total th {
+body.woocommerce-cart .woocommerce .cart_totals .order-total strong,
+tr.order-total th {
     font-size: 18px !important;
     font-weight: 400 !important;
 }
@@ -1185,7 +1186,7 @@ p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-rece
 th.woocommerce-table__product-table.product-total,
 td.woocommerce-table__product-total.product-total,
 .order_details tfoot td {
-    padding-right: 14% !important;
+    padding-right: 12% !important;
     text-align: right;
 }
 
@@ -1399,6 +1400,8 @@ input#shipmondo_find_shop_btn_0 {
 .woocommerce-checkout-review-order-table tr.order-total small.includes_tax {
     display: flex;
     gap: 4px;
+    font-weight: 300;
+    text-transform: lowercase;
 }
 
 /* unchange */
@@ -1730,8 +1733,13 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details l
     text-transform: capitalize !important;
 }
 
-body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(1) {
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(2) {
     border: none;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.15);
+}
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(2) th, body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(2) td {
+    padding-top: 0;
 }
 
 
@@ -1740,7 +1748,7 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
     padding-bottom: 10px;
 }
 
-body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(2) {
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(3) {
     display: none;
 }
 
@@ -1926,7 +1934,7 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
 }
 
 tr.order-total {
-    border-top: 1px solid rgba(119,119,119,0.15) !important;
+    border-top: 1px solid rgba(119, 119, 119, 0.15) !important;
 }
 
 tr.woocommerce-shipping-totals.shipping {
@@ -1939,6 +1947,16 @@ tr.woocommerce-shipping-totals.shipping {
 
 tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
     padding-top: 16px !important;
+}
+
+.bundled_table_item .woocommerce-table__product-name.product-name,
+.bundled_table_item .woocommerce-table__product-total.product-total {
+    padding-top: 0 !important;
+}
+
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:nth-child(1) {
+    border-top: 1px solid rgba(119, 119, 119, 0.15);
+    border-bottom: none;
 }
 
 
@@ -2075,12 +2093,12 @@ tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
         background: #F2F6F5;
         height: 630px;
         width: 100%;
-        bottom: -480px;
+        bottom: -514px;
         left: 0;
     }
 
     .woocommerce-checkout-review-order.ship-a-open:after {
-        height: calc(100% + 480px);
+        height: calc(100% + 514px);
     }
 
     .home .slider-content-wrapper,
@@ -2101,6 +2119,9 @@ tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
 }
 
 @media screen and (max-width:1023px) {
+    .form-row.place-order {
+        padding-bottom: 60px;
+    }
 
     input#shipmondo_find_shop_btn_0 {
         padding: 14px 12px !important;
