@@ -1344,8 +1344,8 @@ ul#shipping_method li small.tax_label {
 }
 
 .shipmondo_stores {
-    display: inline-block;
     width: 100%;
+    display: flex;
 }
 
 .selected_shop_context,
@@ -1355,8 +1355,8 @@ ul#shipping_method li small.tax_label {
 }
 
 .shipmondo_stores div {
-    display: inline-block;
-    width: 64%;
+    /*display: inline-block;*/
+    width: 63%;
 }
 
 .shipmondo_stores div:first-child {
@@ -1381,8 +1381,11 @@ input#shipmondo_find_shop_btn_0 {
     padding: 14px 12px;
     border-radius: 5px !important;
     text-transform: inherit;
-    margin-top: -4px !important;
+    /* margin-top: -4px !important; */
+    margin-left: 2% !important;
 }
+
+
 
 .woocommerce-checkout tr.cart_item small.tax_label,
 .woocommerce-checkout .cart-subtotal small.tax_label {
@@ -1964,6 +1967,17 @@ table.woocommerce-cart-form__contents {
     margin-bottom: 0 !important;
 }
 
+.woocommerce-table__line-item.order_item {
+    border-top: 1px solid rgba(119,119,119,0.15);
+}
+
+
+@media and (-webkit-min-device-pixel-ratio:0) {
+input#shipmondo_find_shop_btn_0 {
+    margin-top: -4px !important;
+}
+}
+
 
 @media screen and (max-width:1334px) {
 
@@ -2234,10 +2248,6 @@ table.woocommerce-cart-form__contents {
     .shipmondo_stores div:first-child {
         margin-bottom: 10px;
     }
-
-    .shipmondo_stores div {
-        width: 80% !important;
-    }
 }
 
 @media screen and (max-width:767px) {
@@ -2291,6 +2301,15 @@ table.woocommerce-cart-form__contents {
 
 @media screen and (max-width:575px) {
 
+.shipmondo_stores {
+    display: unset;
+}
+.shipmondo_stores div {
+    width: 80% !important;
+}
+input#shipmondo_find_shop_btn_0 {
+    margin-left: 0 !important;
+}
 
     ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
         display: block;
