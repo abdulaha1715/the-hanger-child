@@ -85,11 +85,6 @@
 		    jQuery("#order_review").toggleClass("ship-a-open");
 		});
 
-		// coupon toogle class
-		jQuery(".coupontrigger").on('click', function(){
-		    jQuery(".checkout_coupon").toggleClass("open");
-		});
-
 		// scroll to top and menu fixed
 		// $(window).scroll(function() {    
 		//     var scroll = $(window).scrollTop();
