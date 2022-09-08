@@ -1975,7 +1975,9 @@ table.woocommerce-cart-form__contents {
     padding-top: 40px;
 }
 
-a.showcoupon {transition: 0.3s;}
+a.showcoupon {
+    transition: 0.3s;
+}
 
 .coupon-button {
     padding: 10px 0 0;
