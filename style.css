@@ -1983,6 +1983,10 @@ a.showcoupon {
     padding: 10px 0 0;
 }
 
+.woocommerce-checkout .woocommerce-form-coupon-toggle {
+    display: none;
+}
+
 
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {
