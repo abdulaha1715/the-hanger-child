@@ -83,7 +83,6 @@
 				endif; 
 				if( is_page( 'cart' ) || is_page( 'checkout' ) ) {
 					do_action('header_free_shipping_banner');
-					do_action('header_checkout_page_coupon');
 				}
 			?>
 
