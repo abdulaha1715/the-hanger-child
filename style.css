@@ -1148,7 +1148,7 @@ span.optional {
 }
 
 .woocommerce-checkout .woocommerce-form-coupon-toggle {
-    padding: 40px 0;
+    padding: 15px 0 0;
 }
 
 div#order_review ul.wc_payment_methods.payment_methods.methods,
@@ -1950,9 +1950,9 @@ tr.woocommerce-shipping-totals.shipping {
     border: none;
 }
 
-/*section.woocommerce-order-details ul.wc-item-meta {
+section.woocommerce-order-details ul.wc-item-meta {
     padding-left: 20px;
-}*/
+}
 
 tr.woocommerce-cart-form__cart-item.cart_item.bundled_table_item td {
     padding-top: 16px !important;
@@ -1977,7 +1977,7 @@ table.woocommerce-cart-form__contents {
 }
 
 .woocommerce-form-login-toggle {
-    padding-top: 40px;
+    padding-top: 15px;
 }
 
 a.showcoupon {
@@ -1988,10 +1988,6 @@ a.showcoupon {
     padding: 10px 0 0;
 }
 
-.woocommerce-checkout .woocommerce-form-coupon-toggle {
-    display: none;
-}
-
 body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:last-child th,
 body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:last-child td {
     font-size: 19px;
@@ -1999,10 +1995,110 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
     font-weight: 400;
 }
 
-body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:last-child td span{
+body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table--order-details tfoot tr:last-child td span {
     font-size: 19px;
 }
 
+form.checkout_coupon.woocommerce-form-coupon,
+.woocommerce-form-login-toggle,
+.woocommerce-form-coupon-toggle {
+    background: #EDE5BD !important;
+    position: relative;
+}
+
+.woocommerce-form-login-toggle:before,
+.woocommerce-form-login-toggle:after,
+.woocommerce-form-coupon-toggle:before,
+.woocommerce-form-coupon-toggle:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #EDE5BD !important;
+    top: 0;
+}
+
+.woocommerce-form.woocommerce-form-login.login.show:before,
+.woocommerce-form.woocommerce-form-login.login.show:after,
+form.checkout_coupon.woocommerce-form-coupon:before,
+form.checkout_coupon.woocommerce-form-coupon:after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 2000px);
+    height: 100%;
+    background: #EDE5BD !important;
+    top: 0;
+}
+
+.woocommerce-form.woocommerce-form-login.login.show:before,
+form.checkout_coupon.woocommerce-form-coupon:before,
+.woocommerce-form-login-toggle:before,
+.woocommerce-form-coupon-toggle:before {
+    left: 100%;
+}
+
+.woocommerce-form-login-toggle:after,
+.woocommerce-form-coupon-toggle:after {
+    left: -100%;
+}
+
+.woocommerce-form.woocommerce-form-login.login.show:after,
+form.checkout_coupon.woocommerce-form-coupon:after {
+    left: calc(-100% - 2000px);
+}
+
+.showcoupon,
+.showlogin {
+    border-bottom: 1px solid !important;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon p.form-row-last .button:hover,
+body.woocommerce-checkout .woocommerce .woocommerce-info a {
+    color: #000 !important;
+}
+
+.site-free-shipping-banner {
+    border-bottom: 1px solid #fff;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon p:first-child {
+    display: none;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon p {
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon p.form-row-last {
+    height: auto;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon p.form-row::before {
+    top: 86px;
+}
+
+.woocommerce-checkout .woocommerce-error {
+    margin: 0 !important;
+}
+
+body.woocommerce-checkout .woocommerce .checkout_coupon {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 40px 0 0 0;
+}
+
+.woocommerce-form.woocommerce-form-login.login.show p {
+    margin-top: 0;
+}
+
+.woocommerce-form.woocommerce-form-login.login.show {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    background: #EDE5BD !important;
+    padding-top: 20px;
+}
 
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {

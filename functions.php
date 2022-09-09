@@ -750,13 +750,3 @@ if ( class_exists( 'Kirki' ) ) {
     ) );
 }
 
-/**
- * Cupon trigger link
- */
-function coupon_after_order_total() { echo "
-    <div class='coupon-button'>
-        <a href='#coupon_code' class='showcoupon'>Har du en rabatkupon?</a>
-    </div>";
-}
-add_action('woocommerce_review_order_after_submit','coupon_after_order_total');
-
