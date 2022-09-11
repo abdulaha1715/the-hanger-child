@@ -1923,7 +1923,7 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
 .header_search_ajax_results_wrapper:after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: calc(100% + 2000px);
     height: calc(100% - 1px);
     background: #fff;
     top: 1px;
