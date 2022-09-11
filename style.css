@@ -2100,6 +2100,10 @@ body.woocommerce-checkout .woocommerce .checkout_coupon {
     padding-top: 20px;
 }
 
+header.site-header-style-1.header-sticky.active-search {
+    overflow-x: clip;
+}
+
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {
         margin-top: -4px !important;
