@@ -2105,6 +2105,11 @@ header.site-header-style-1.header-sticky.active-search {
     overflow-x: clip;
 }
 
+
+.blockUI.blockOverlay {
+  background: #F2F6F5 !important;
+}
+
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {
         margin-top: -4px !important;
