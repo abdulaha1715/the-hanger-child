@@ -146,10 +146,11 @@ function beibi_labels_placeholders( $f ) {
 
 	// first name can be changed with woocommerce_default_address_fields as well
     // labels doesn't change as it's said they should... 
-    $f['billing']['billing_address_1']['label']  = 'Adresse';
-    $f['shipping']['shipping_address_1']['label']  = 'Adresse';
-    $f['order']['order_comments']['label']       = 'Tilf&oslash;j bem&aelig;rkninger til ordren?';
-    $f['order']['order_comments']['placeholder'] = 'Evt bem&aelig;rkning til din ordre (til Beibi, ikke til fragtselskabet)';
+    $f['billing']['billing_address_1']['label']   = 'Adresse';
+    $f['shipping']['shipping_address_1']['label'] = 'Adresse';
+    $f['shipping']['shipping_phone']['label']     = 'Telefon';
+    $f['order']['order_comments']['label']        = 'Tilf&oslash;j bem&aelig;rkninger til ordren?';
+    $f['order']['order_comments']['placeholder']  = 'Evt bem&aelig;rkning til din ordre (til Beibi, ikke til fragtselskabet)';
 	
 	return $f;
 

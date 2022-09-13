@@ -2105,9 +2105,17 @@ header.site-header-style-1.header-sticky.active-search {
     overflow-x: clip;
 }
 
-
 .blockUI.blockOverlay {
   background: #F2F6F5 !important;
+}
+
+body.woocommerce-cart .woocommerce .woocommerce-cart-form tr:not(.cart_item),
+tr.woocommerce-cart-form__cart-item.cart_item {
+    border-top: 1px solid rgba(119,119,119,0.15);
+}
+
+tr.woocommerce-cart-form__cart-item.cart_item:first-child {
+    border-top: none;
 }
 
 @media and (-webkit-min-device-pixel-ratio:0) {
@@ -2115,7 +2123,6 @@ header.site-header-style-1.header-sticky.active-search {
         margin-top: -4px !important;
     }
 }
-
 
 @media screen and (max-width:1334px) {
 
