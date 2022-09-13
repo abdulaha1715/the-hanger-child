@@ -1653,6 +1653,7 @@ header.site-header.site-header-style-1.header-normal {
 }
 
 header.site-header-style-1.header-sticky.active-search {
+    margin-bottom: -1px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.75);
 }
 

@@ -70,6 +70,10 @@
 			jQuery(".header_search_input").focus();
 		});
 
+		jQuery("input#search").keyup(function(){
+			jQuery(".header_search_ajax_results_wrapper").addClass('visible animated');
+		});
+
 		// search toogle class
 		jQuery(".closs-s-bar").click(function(){
 			jQuery(".header-search-below").removeClass("active-search");
