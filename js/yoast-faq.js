@@ -67,7 +67,10 @@
 			jQuery(".header-search-icon-below").toggleClass("close");
 			jQuery(".header-search-below").toggleClass("active-search");
 			jQuery(".site-header-style-1").toggleClass("active-search");
-			jQuery(".header_search_input").focus();
+			// jQuery(".header_search_input").focus();
+			setTimeout(function(){
+				$(".header_search_input").focus();
+			}, 500);
 		});
 
 		jQuery("input#search").keyup(function(){
