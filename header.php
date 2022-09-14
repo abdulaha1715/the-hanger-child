@@ -47,7 +47,6 @@
 
 						<?php } elseif ( is_product() ) { ?>
 							<?php get_template_part( 'template-parts/headers/header-sticky', GBT_Opt::getOption('header_template') ) ?>
-							<?php get_template_part( 'template-parts/headers/header-sticky-product' ) ?>
 
 						<?php } else { ?>
 

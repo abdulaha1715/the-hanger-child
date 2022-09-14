@@ -1199,10 +1199,13 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 }
 
 .woocommerce-table--order-details .includes_tax {
-    display: flex;
-    justify-content: end;
+    display: inline-block;
     font-size: 10px;
     text-transform: lowercase;
+}
+
+.woocommerce-table--order-details .includes_tax span {
+    display: inline-block !important;
 }
 
 .woocommerce-table--order-details .includes_tax .woocommerce-Price-amount.amount {
@@ -1918,6 +1921,11 @@ p.form-row.form-row-wide.mailchimp-newsletter label {
 
 .site-header-style-1 .navigation-foundation>ul>li>a>span:before {
     background-color: #fff !important;
+}
+
+.header_search_ajax_results_wrapper {
+    background: #fff;
+    margin-top: 1px;
 }
 
 .header_search_ajax_results_wrapper:before,
