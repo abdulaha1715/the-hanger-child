@@ -941,10 +941,6 @@ form.checkout.woocommerce-checkout {
     padding-bottom: 0 !important;
 }
 
-.form-row.place-order {
-    padding-bottom: 270px;
-}
-
 .woocommerce-checkout header.entry-header {
     display: none;
 }
@@ -2276,24 +2272,6 @@ tr.woocommerce-cart-form__cart-item.cart_item:first-child {
         height: unset;
         overflow: unset;
         visibility: visible;
-    }
-
-    .woocommerce-checkout-review-order.ship-a-open {
-        position: relative;
-    }
-
-    .woocommerce-checkout-review-order.ship-a-open:before {
-        position: absolute;
-        content: "";
-        background: #F2F6F5;
-        height: 630px;
-        width: 100%;
-        bottom: -514px;
-        left: 0;
-    }
-
-    .woocommerce-checkout-review-order.ship-a-open:after {
-        height: calc(100% + 514px);
     }
 
     .home .slider-content-wrapper,
