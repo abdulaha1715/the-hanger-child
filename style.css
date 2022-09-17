@@ -2122,6 +2122,15 @@ tr.woocommerce-cart-form__cart-item.cart_item:first-child {
     border-top: none;
 }
 
+p.form-row.form-row-wide.mailchimp-newsletter {
+    display: none;
+}
+
+div#mailchimp-gdpr-fields p:first-child {
+    margin: 0;
+    display: none;
+}
+
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {
         margin-top: -4px !important;
