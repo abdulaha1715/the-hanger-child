@@ -1793,13 +1793,16 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocomm
 .quantity-nav .quantity-button,
 .bundle_button .quantity .quantity-button,
 .quantity-nav .quantity-button,
-.bundled_item_after_cart_details .quantity .quantity-button {
+.bundled_item_after_cart_details .quantity .quantity-button,
+td.bundled_item_col.bundled_item_qty_col .quantity-button {
     display: none;
 }
 
 .bundle_button .quantity-nav,
 .bundle_button .quantity-nav .quantity-button,
 .bundled_item_after_cart_details .quantity-nav,
+td.bundled_item_col.bundled_item_qty_col .quantity-nav,
+td.bundled_item_col.bundled_item_qty_col .quantity-button,
 .bundled_item_after_cart_details .quantity .quantity-nav .quantity-button {
     display: block;
 }
@@ -2536,6 +2539,5 @@ div#mailchimp-gdpr-fields p:first-child {
         width: 100% !important;
     }
 }
-
 
 @media screen and (max-width:410px) {}
