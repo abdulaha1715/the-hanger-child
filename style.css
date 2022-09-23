@@ -1349,7 +1349,7 @@ ul#shipping_method li small.tax_label {
 
 .shipmondo_stores {
     width: 100%;
-    display: flex;
+    display: inline-block;
 }
 
 .selected_shop_context,
@@ -1359,8 +1359,9 @@ ul#shipping_method li small.tax_label {
 }
 
 .shipmondo_stores div {
-    /*display: inline-block;*/
     width: 63%;
+    display: inline-block;
+    vertical-align: middle !important;
 }
 
 .shipmondo_stores div:first-child {
@@ -1388,8 +1389,6 @@ input#shipmondo_find_shop_btn_0 {
     /* margin-top: -4px !important; */
     margin-left: 2% !important;
 }
-
-
 
 .woocommerce-checkout tr.cart_item small.tax_label,
 .woocommerce-checkout .cart-subtotal small.tax_label {
@@ -2127,6 +2126,11 @@ tr.woocommerce-cart-form__cart-item.cart_item:first-child {
 
 p.form-row.form-row-wide.mailchimp-newsletter {
     display: none;
+}
+
+.shipmondo_stores #shipmondo_zipcode_field_0, 
+.shipmondo_stores #shipmondo_find_shop_btn_0 {
+    vertical-align: middle !important;
 }
 
 div#mailchimp-gdpr-fields p:first-child {
