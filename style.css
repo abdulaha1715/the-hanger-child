@@ -2138,6 +2138,51 @@ div#mailchimp-gdpr-fields p:first-child {
     display: none;
 }
 
+.elementor-page .row {
+    max-width: 1140px !important;
+}
+
+.slider-content-padd {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 80em) {
+    .slider-content-padd {
+        padding-left: 5.25rem;
+        padding-right: 5.25rem;
+        padding-left: 5.25rem!important;
+        padding-right: 5.25rem!important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .slider-content-padd {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .midium-6 {
+        width: 50%;
+    }
+    .midium-12 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .midium-6 {
+        width: 100%;
+    }
+    .slide-content-image {
+        text-align: center !important;
+    }
+}
+
+
+
 @media and (-webkit-min-device-pixel-ratio:0) {
     input#shipmondo_find_shop_btn_0 {
         margin-top: -4px !important;
