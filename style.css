@@ -1375,7 +1375,6 @@ ul#shipping_method li small.tax_label {
 input#shipmondo_zipcode_field_0 {
     height: 44px;
     margin: 0 !important;
-    padding: 6px 10px !important;
     border-radius: 5px !important;
     background: transparent !important;
 }
