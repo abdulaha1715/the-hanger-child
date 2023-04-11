@@ -106,7 +106,7 @@
 
 		$(document).on('click', '[data-lightbox]', lity);
 
-		$("#mailchimp_woocommerce_newsletter").prop('checked', true);
+		// $("#mailchimp_woocommerce_newsletter").prop('checked', true);
 	});
 
 }(jQuery));

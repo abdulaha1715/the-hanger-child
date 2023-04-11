@@ -2120,7 +2120,7 @@ tr.woocommerce-cart-form__cart-item.cart_item:first-child {
 }
 
 p.form-row.form-row-wide.mailchimp-newsletter {
-    display: none;
+    /*display: none;*/
 }
 
 .shipmondo_stores #shipmondo_zipcode_field_0, 
